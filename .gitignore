@@ -1,0 +1,65 @@
+# ====================== 敏感信息 ======================
+# API Keys、Tokens、密码
+.qveris-env
+*.env
+*.env.local
+*.env.*.local
+
+# OpenClaw 认证配置
+~/.openclaw/agents/main/agent/auth-profiles.json
+~/.openclaw/**/*.json
+
+# ====================== 日志文件 ======================
+*.log
+logs/
+backup.log
+update-openclaw.log
+
+# ====================== 临时文件 ======================
+.last-notify-check
+*~
+*.tmp
+.DS_Store
+
+# ====================== 排除的目录 ======================
+# 大型项目（已有独立仓库）
+daily_stock_analysis/
+banana-slides/
+storage/
+chatgpt_memory/
+notebooklm/
+
+# Fast Note Sync 配置（可能包含认证信息）
+config/
+
+# 临时/实验性项目
+disable-auto-update.md
+docker-compose-fastnote.yml
+heartbeat-check.sh
+nginx/
+clawd-memory/
+
+# ====================== 保留的文件（使用 ! 前缀） ======================
+# 核心配置
+!AGENTS.md
+!SOUL.md
+!USER.md
+!IDENTITY.md
+!TOOLS.md
+!HEARTBEAT.md
+!MEMORY.md
+
+# 备份脚本
+!backup-memory.sh
+!backup-with-notify.sh
+!check-notifications.sh
+
+# 同步脚本
+!sync-obsidian-memory.sh
+!sync-to-obsidian.sh
+
+# 内存文件
+!memory/
+
+# 脚本目录
+!scripts/

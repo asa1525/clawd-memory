@@ -1,0 +1,151 @@
+// ============================================================
+// 纷享销客 API - Power Query 完整脚本
+// 功能：1.获取Token 2.获取对象列表 3.筛选自定义对象
+// ============================================================
+
+// ============================================================
+// 【第一步】获取 Token（返回 accessToken, ea, openUserId）
+// ============================================================
+let
+    // 配置参数（请替换为你的实际值）
+    BaseUrl = "https://open-hk.sharecrm.com",
+    AppId = "FSAID_13190c5",
+    AppSecret = "e60a2bf7854e459e939b36a16565f5f6",
+    PermanentCode = "C032903A72BF23A8313ADA32E6B86162",
+
+    // 构建Token请求URL（注意：需要 thirdTraceId）
+    TokenUrl = BaseUrl & "/oauth2.0/token?thirdTraceId=" & Text.NewGuid(),
+
+    // 请求头
+    TokenHeaders = [
+        #"Content-Type" = "application/json"
+    ],
+
+    // 请求体（注意：必须有 grantType = "app_secret"）
+    RequestBody = Json.FromValue([
+        appId = AppId,
+        appSecret = AppSecret,
+        permanentCode = PermanentCode,
+        grantType = "app_secret"
+    ]),
+
+    // 发送请求
+    TokenResponse = Web.Contents(TokenUrl, [
+        Headers = TokenHeaders,
+        Content = RequestBody
+    ]),
+
+    // 解析响应
+    TokenJson = Json.Document(TokenJson),
+
+    // 提取关键字段
+    accessToken = TokenJson[accessToken],
+    expiresIn = TokenJson[expiresIn],
+    ea = TokenJson[ea],
+    openUserId = TokenJson[openUserId]
+
+in
+    [accessToken = accessToken, expiresIn = expiresIn, ea = ea, openUserId = openUserId]
+
+
+// ============================================================
+// 【第二步】获取对象列表（返回所有对象，包括自定义对象）
+// ============================================================
+let
+    // 复用上一步的Token结果
+    TokenInfo = #"步骤1_GetToken",
+    accessToken = TokenInfo[accessToken],
+    ea = TokenInfo[ea],
+    openUserId = TokenInfo[openUserId],
+
+    // 构建对象列表API URL
+    ObjectListUrl = "https://open-hk.sharecrm.com/cgi/crm/v2/object/list?thirdTraceId=" & Text.NewGuid(),
+
+    // 设置请求头（关键！Token要放在Header，不是Query参数）
+    Headers = [
+        #"Content-Type" = "application/json",
+        #"Authorization" = "Bearer " & accessToken,  // Bearer后面有空格
+        #"x-fs-ea" = ea,
+        #"x-fs-userid" = openUserId
+    ],
+
+    // 发送请求
+    Response = Web.Contents(ObjectListUrl, [
+        Headers = Headers
+    ]),
+
+    // 解析响应
+    ResponseJson = Json.Document(Response),
+
+    // 提取对象列表（根据实际API返回结构调整）
+    Objects = ResponseJson[objects]  // 或 ResponseJson[data] 或 ResponseJson[result]
+
+in
+    Objects
+
+
+// ============================================================
+// 【第三步】筛选自定义对象
+// ============================================================
+let
+    // 复用上一步的对象列表
+    AllObjects = #"步骤2_GetObjectList",
+
+    // 自定义对象筛选逻辑
+    // 纷享销客中，自定义对象通常有这些特征：
+    // 1. API名称通常以 "New_" 或 "Ext_" 开头
+    // 2. 或者 objectType = 2 (1=系统对象, 2=自定义对象)
+    // 3. 或者根据 name/label 字段判断
+
+    // 筛选条件（根据实际情况调整）
+    CustomObjects = List.Select(AllObjects, each
+        // 条件1：API名称以 "New_" 开头
+        Text.StartsWith(_[api_name]?, "New_", Comparer.OrdinalIgnoreCase)
+        or
+        // 条件2：API名称以 "Ext_" 开头
+        Text.StartsWith(_[api_name]?, "Ext_", Comparer.OrdinalIgnoreCase)
+        or
+        // 条件3：对象类型为自定义（如果字段存在）
+        (_[objectType]? = 2)
+    )
+
+in
+    CustomObjects
+
+
+// ============================================================
+// 【第四步】获取自定义对象的数据
+// ============================================================
+let
+    // 选择要查询的对象API名称
+    TargetObjectApiName = "New_你的自定义对象API名称",  // 替换为实际对象名
+
+    // 复用Token
+    TokenInfo = #"步骤1_GetToken",
+    accessToken = TokenInfo[accessToken],
+    ea = TokenInfo[ea],
+    openUserId = TokenInfo[openUserId],
+
+    // 构建单个对象的数据获取API
+    // 纷享销客的对象数据API通常格式：
+    // /crm/v2/data/get/{objectApiName}?thirdTraceId=xxx
+    DataUrl = "https://open-hk.sharecrm.com/cgi/crm/v2/data/get/" & TargetObjectApiName & "?thirdTraceId=" & Text.NewGuid(),
+
+    // 请求头
+    Headers = [
+        #"Content-Type" = "application/json",
+        #"Authorization" = "Bearer " & accessToken,
+        #"x-fs-ea" = ea,
+        #"x-fs-userid" = openUserId
+    ],
+
+    // 发送请求
+    Response = Web.Contents(DataUrl, [
+        Headers = Headers
+    ]),
+
+    // 解析响应
+    ResponseJson = Json.Document(Response)
+
+in
+    ResponseJson
