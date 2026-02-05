@@ -563,3 +563,92 @@ APP, OKLO, NUAI, IONQ (量子计算), CRWD (网络安全)
 1. 添加 note vault 到 GitHub 备份
 2. 添加 OpenClaw 配置到 GitHub 备份
 3. 排除敏感信息（认证文件）
+
+## 2026-02-04 - Fast Note Sync API 集成成功
+
+### 🎯 关键发现
+
+| 发现 | 值 |
+|------|-----|
+| Vault 名称 | **Obsidian Vault** |
+| 认证方式 | **Authorization: Bearer {token}** |
+| HTTP 方法 | **POST** (创建/更新) |
+| Content-Type | **application/x-www-form-urlencoded** |
+| 笔记路径格式 | **YYYY/MM/YYYY-MM-DD.md** |
+| 登录凭证 | asa1525 / a9940710 |
+
+### 🔧 正确的 API 调用方式
+
+```bash
+# 1. 登录获取 token
+POST /api/user/login
+Content-Type: application/x-www-form-urlencoded
+credentials=asa1525&password=a9940710
+
+# 2. 创建/更新笔记
+POST /api/note
+Authorization: Bearer {token}
+Content-Type: application/x-www-form-urlencoded
+vault=Obsidian Vault&path=2026/02/2026-02-04.md&content=# content...
+
+# 注意：必须使用 --data-urlencode 参数处理特殊字符
+```
+
+### ✅ 已更新的脚本
+
+**位置：** `/root/.openclaw/workspace/scripts/create_daily_note.sh`
+
+**工作流程：**
+1. 从 MEMORY.md 提取待办事项
+2. 生成笔记内容模板
+3. 登录 Fast Note Sync 获取 token
+4. 通过 API 创建笔记到 Obsidian Vault
+5. Obsidian 自动同步到 Pan 的设备
+
+### ⚠️ 历史错误教训
+
+1. ❌ 直接写文件到 `/root/.openclaw/workspace/storage/vault/u_1/note/n_XX/`
+   - Fast Note Sync 服务不会自动扫描文件系统
+   - 必须通过 REST API 创建笔记才能触发同步
+
+2. ❌ 使用错误的 Vault 名称 ("u_1")
+   - 正确的 Vault 名称是 "Obsidian Vault"
+
+3. ❌ 使用 JSON 格式发送 content
+   - 必须使用 `application/x-www-form-urlencoded` + `--data-urlencode`
+
+
+## 2026-02-04 (更新) - Fast Note Sync 正确的工作流程
+
+### 🎯 关键发现（已修正）
+
+**正确的笔记路径：**
+```
+/root/.openclaw/workspace/storage/vault/u_1/note/n_65/content.txt
+```
+
+**工作流程：**
+1. 脚本直接写文件到上述路径
+2. Fast Note Sync 服务监控该目录
+3. 检测到文件变化后自动同步到 Obsidian
+4. Obsidian 看到：/vault/u_1/note/n_65/
+
+### ✅ 已修正的脚本
+
+**位置：** `/root/.openclaw/workspace/scripts/create_daily_note.sh`
+
+**修正内容：**
+- 直接写文件到 `/root/.openclaw/workspace/storage/vault/u_1/note/n_XX/content.txt`
+- 不再使用 API 创建笔记
+
+### ❌ 之前的错误
+
+1. 错误使用 REST API 创建笔记
+   - API 方式将笔记存储到数据库
+   - 但 Fast Note Sync 服务是通过文件系统监控同步的
+   - 应该直接写文件！
+
+2. Vault 名称混淆
+   - "Obsidian Vault" 是 API 中的 vault 名称
+   - 实际文件路径是 `/root/.openclaw/workspace/storage/vault/u_1/note/`
+
