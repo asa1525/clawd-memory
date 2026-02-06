@@ -1259,3 +1259,72 @@ Watchdog 每60秒检测
 - ✅ 修复完成
 - ✅ 今天笔记已创建：n_909 (2026-02-06)
 - ✅ 推送到 GitHub
+
+---
+
+## 2026-02-05 - Pan 的 OKR 初稿（来自与 Chapin 的会议）
+
+### 🎯 Objective（目标）
+
+**建立 CSI 团队的数据基础设施，为管理层提供决策支持**
+
+> 灵感来源：Chapin — "幫公司做 translation，建立 data infrastructure"
+
+---
+
+### 📈 Key Results（关键结果）
+
+#### KR1：数据基础设施现代化 🏗️
+**完成时间：** 2026年12月31日
+
+- [ ] 完成成衣布料业务数据与 ECOM（B2C）数据的统一整合
+- [ ] 建立 aggregate view，消除 10 套不同 data infrastructure 的问题
+- [ ] 确保 B2B 与 B2C 数据在同一套系统中可查询
+
+#### KR2：建立 Single Source of Truth 📊
+**完成时间：** 2026年12月31日
+
+- [ ] 识别所有关键 Master Data（客户、产品、供应商）
+- [ ] 完成数据质量评估，标记 reliable vs unreliable 数据源
+- [ ] 建立数据血缘图（data lineage），让管理层知道"数据从哪里来"
+
+#### KR3：推动销售与财务分析能力 📈
+**完成时间：** 2026年12月31日
+
+- [ ] 完成 GP% Dashboard 的 CRM 数据集成，提升 sales data 完整性
+- [ ] 解决 "internal credit vs insurance credit" 对比机制
+- [ ] 建立 regular AR review 机制（每月/每季与 Finance/Sales 对齐）
+
+---
+
+### 💡 补充建议（来自 Chapin）
+
+| 类型 | 建议 |
+|------|------|
+| **BSC（绩效考核）** | "HR 嗰份嘢 HEA 做就得，minimal effort，唔好嘥时间" |
+| **Progress 汇报** | "唔好净系讲做咗咩，要讲 end result 有冇 value add" |
+| **Planning 节奏** | "第一个季（Q1）搞清方向，paint the picture，老细畀 resource 之后，每季 check progress" |
+
+---
+
+### 🔗 与现有工作的关联
+
+| 当前工作 | 对应 KR |
+|----------|---------|
+| GP% Dashboard（等待 Ken 提供历史数据） | KR3 |
+| AR Dashboard（等待汇率数据） | KR3 |
+| 数据中台项目（向管理层提案） | KR1, KR2 |
+| CRM 系统对接 | KR1, KR3 |
+
+---
+
+### ❓ 需要确认的问题
+
+1. **KR3 是否需要加入具体数字目标？**
+   - 例如："GP% Dashboard 覆盖 80% 关键客户"
+
+2. **ECOM 数据的优先级？**
+   - Chapin 说 ECOM 是 2026 年重点，但你目前主要在做 B2B 业务
+
+3. **时间线是否太紧？**
+   - KR1+KR2 可能需要分阶段完成（Q1-Q2 先完成框架，Q3-Q4 深化）
