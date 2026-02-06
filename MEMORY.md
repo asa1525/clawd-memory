@@ -1167,3 +1167,73 @@ bash scripts/watchdog.sh install
 | Cron 正常 | Cron | 每天凌晨3点 |
 | Cron 失败 | Watchdog | 每60秒检测后执行 |
 | 网关崩溃 | Watchdog | 自动重启/回滚 |
+
+---
+
+## ⚠️ 每晚 GitHub 备份规则（重要！）
+
+**记录时间：** 2026-02-06 01:19 UTC
+
+### 📋 备份内容
+
+| 文件/目录 | 说明 |
+|----------|------|
+| `memory/*.md` | 每日工作日记 |
+| `MEMORY.md` | 长期记忆（重要对话摘要） |
+| `AGENTS.md` | 工作区规则和配置 |
+| `backup-memory.sh` | 备份脚本 |
+| 其他配置文件 | 新增的工具配置 |
+
+### 📁 备份位置
+
+| 项目 | 值 |
+|------|-----|
+| **GitHub 仓库** | `asa1525/clawd-memory` |
+| **分支** | `main` (默认分支) |
+| **备份脚本** | `/root/.openclaw/workspace/backup-memory.sh` |
+| **备份通知** | `/root/.openclaw/workspace/backup-with-notify.sh` |
+| **日志文件** | `/root/.openclaw/workspace/backup.log` |
+
+### ⏰ 备份时间
+
+| 类型 | 时间 | 说明 |
+|------|------|------|
+| **Cron 主备份** | 每天凌晨 3:00 (UTC) | 自动执行 |
+| **Watchdog 兜底** | 每60秒检测 | Cron 失败时自动执行 |
+| **手动备份 | 随时 | `bash scripts/watchdog-backup.sh` |
+
+### 🔧 备份命令
+
+```bash
+# Cron 自动执行
+bash /root/.openclaw/workspace/backup-memory.sh
+
+# 手动触发备份
+bash /root/.openclaw/workspace/scripts/watchdog-backup.sh
+
+# 查看备份日志
+cat /root/.openclaw/workspace/backup.log
+```
+
+### ⚠️ 注意事项
+
+- **默认分支是 main**，不是 master
+- 备份失败时会记录到 `backup.log`
+- Watchdog 会检测 Cron 是否成功，失败时自动兜底
+- GitHub Token 需要在环境变量中配置（`GITHUB_TOKEN`）
+
+### 🔄 备份流程
+
+```
+Cron (凌晨3:00)
+    ↓
+执行 backup-memory.sh
+    ↓
+Git add -A + commit + push → GitHub main
+    ↓
+失败 → 记录到 backup.log
+    ↓
+Watchdog 每60秒检测
+    ↓
+如果 Cron 失败 → watchdog-backup.sh 兜底
+```
