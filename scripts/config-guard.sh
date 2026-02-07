@@ -1,0 +1,1 @@
+/root/.openclaw/workspace/scripts/config-guard-wrapper.sh

@@ -1,0 +1,1 @@
+/root/.openclaw/workspace/config-guard/scripts/pre-config-hook.sh

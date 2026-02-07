@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get笔记</title>
+    <link rel="stylesheet" href="notes/files/style.css">
+    <script src="notes/files/script.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="icon">
+        <img alt="Base64 encoded image" style="width: 162px; height: 36px;"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAABICAMAAAC5gXw7AAAAclBMVEUAAAAQExgRFRgRFBgTFRgQHCARFBkSExgUFBgSFBgRFBkQFBgQFRsSFBkRFBkSFRgQFBgRFRoQFBkSFBkSFBkQFBgSFBj/a0EQFBgVFRv/akH/bED/cED/akH/a0L/aUH/akH/bEL/akEQExgRFBj/akFPcxd5AAAAJHRSTlMAIN+/YBDvn0CAz0AwkK+gYFBwj3CAf79/MN8iEO+bcGBMgF/cSJjkAAAIZElEQVR42uya6W7bMAyASZ2+E8duurvYwLz/K65Ll8nRRV9DCmzfz8pQ7U8URdOB//xnO/hRw7+K6uSA2WGlgUdVRFQpcBRWpKnk0MMiUA2dMPQLIbuxgHeEvd5V0mJ3HeYtfqA3znBjJA5jEWZSDIJ8pEJ4Hyi6IvPDLT/NjVuEIDE45xz6bCiOVPAe6OiNYLu9RYnMDjtuceKWo6VZdBoY0FIG8R40Copy2+ImN+zQ5Pht5UDzqDQbhXlED7uix7IsYAlIaSRAnR12TK9DJhLDeTIUgngswn4MfojwKMrQgKUMGF8L7XllGZkn4hF6z3N2sUVBGVR+uABH5bYnwMJQNCkFWNFMOmBYHlRyn0CkIj/cgKOnG0e4cRQ0jzLhUNBsEPZBelNuDkTBDU95ignRmKSZKDabHZKCffCm3ByIpvmQHfZW6lgRkaxhNrpyIb/VIZUPk4gm40g2SLlhDK2ghiVoQ79pZzoUtlWvlK0kj/5RErVweUybYEkxNjzCZsIUQDZ9bw55QnDUh7sr8FESu2l2e/KPSl3FhgXsSPPHD1/b2BocwcFVwmMkajk9UINQ1NXdKuv81KiuFHpdpS+5ZC0biHEydOUAD5E4lWQBglhDf5UP7uLceshis8QwIZpTcoaDIZJHeJDEwSv3XSi6wt1JdQ/ccYXSoLdLtDRFNNlJNMCjJFZBqdJOpZmgzyDd1s/vvWqzRPQ7HQyPkuiip/YKnvJOomncFksZOtA9w1aJ9u84RGUrcX2oqhs/shKtmtIjhLQURFYvXI6WzqHLP1X1pIvBlpiXSMU2iRjW9NvRZ+nXnAghfK8ozN2mhgnYn2oXlrFsVMjIn0/k0cI8aicxGYgnWAvf2JUNJ5HLK3hwrx0RUAbDeDbuLMoVxmZpsd3dTUcT7D5RaOZGF+WQW7+GqkEkNyyKVT0VFNFaWe39JtKI+V8XyGNFntKIWBSFUmosy8FaK2UlhOCbJsfWvmIWPTqK+M11OwfiSFkGTiLfPsbxqkoKIQzNp4EYMiVRY+HTn02iqbZzIH5Y9KlsTa9opFV0sEBiYQXlOUHic43d2SH/qYyy9PEaYxVSz5eoDHkwp16ZuukvL8/Pz9++7+kwXKsV/fN2VRjWAHMloiSeI6RSIkx4+Xq58ukzOD4WHuiVZLTwJwQrdvOBlmKeNAAvMddZZarKKl5S/LjccBZHQwEdrumOF3MkHphCbR6mdUHISEw9A39rcb3fL45PX7ytmmxX2GCwPSmlWplcyEwrv2Ya9CxGdK1C8GAk6hVxCDpeSH26THjJfiASOpXy2yaVZkREolpZhxrxyuQFvK/rBjEuj5c4EIvpwQOjte3ny5Rn99+SZ2h4hUT32JIWSOTplVJ3qg7hJOskInGISIJtPIluNzu+wi/Yw7ZOhLw+k4/cJtERSEy9ypQ9K9FPSJX06eypgQh1VOLPcs50V24QhsIxHiCQhGzTVlX3dvr+r9iqG5OMybnAjVqp5+doQMmHMQY7fPy60fEYWckjusPynqkS4h7VHxKc3sooegLE2GzQGbt0ADFaokEQjRQKaivWIVRA1BdnrQ0CKiDGELuyVByJsfZbyScCiLM06rP0mp4qIJK6laqFEF0c5hxpeb//6h7ix+g9D2LiQZiurRj6VlVAqFuxLhDiGFFkyYjhz5t3G0P8oen4rMUL01V4Y6aq5P18K9eMIYpGi+XllNdHYcdC4WiWgPU6ZmOrILpyhkqfBnHc1otGW/wVb79/u/FIP7XB2UvOVY7PB91UQlxqDPE0iEvyPT59fv/+w1vomcyj1fUyRNU9Q0GTKeFnlApdcx7EDgQBsFF4/EnHSP5OMdQHECtM0TCztXZwbvmxq+mIQLUBgJi/suC2Qlw9PUKUCmGZnqnIsw9e7VEF0MnpEEdwtI0OlyltiU1vEgvK+du+6MRft+38nbVz7kpnQexAPAoM0QtTt9+fuASdEWClhasWrXM/9jOpjN+1HiKezz67anoSrPOyTUy+6O4zQHz/fajKdcivf1vVKqHCaush4qPiNXPjZUgYC4uKNF8KvsToBmo2t0rZfIgFUcMX+HcvP5THPOK0uwpr7bV+u4LFGRDLTdH00CHei8QsnEN+wAjfgakGyf/DELXJoGhT2YYO1pZp9eA2tckxxVu9pkqI2BTxy5BPHnRquECtgq2OwvCdCHFsToOoFSwNlE+pp2RW3YLEvpMCLEUoMK6RUjyVx4lYnVS8hasO7UEngWQ73D+lz6DYPQmV8szBWuucu4DkXx5EvCOFGPvVgKwFH/TQ+kSCYMq5X6FXMir+C9u+dl0vsDhD2VnHGPfK8GvDpk/dGKFbTvt33o8eobzUwSnjgPIzdp2f5WRbB8GMtBg+eLars9YbeaHDtUZsnbNswC0CO/mwZt5ocJEHVnbpXichLrsHhFG/0nUJIJdaoLAMyeiLPwXR4IqLbRlGANk+6FYopCIZUlUM46kN1gRjaBzxpNyxamXMrY09UwqiNjhC0a092OGSLw1ao6YM/nD4uGxhNPyobYb6IkLczwrPknbPOpTXT6oexu2YIabYFkW6WDOoxakzpuVp05EJ2ARgCCiKDqf+bAJN55I6XJ9wmVBmOX6dY6OQGxMD3kBZb+9AfWJ9IfiEerFCQwCk1A/MJQl0bANVlbLYmjBGK1LAPeDiaeK6O4x0KHJFY0wMZVJkOobACALGWNC6YzDz4WEUlOpS8YTfjSaSmhokmoLZ+9ChazI0j2ZDkBeNG9Ggaq6NoRHYzpwMMQ1luLSM2wf62VlmpRSHYel0k61uGX62txnNaXaBvfJD3xSIBk5ZTlhIdgOD8AHsPEaOQk//ym2c54kk6eNDDfFXQX1P/+9FvmfqG5Yr1sBI9+UHAAAAAElFTkSuQmCC">
+    </div>
+    <div class="info">
+        <div class="name">@Pan</div>
+        <div class="date">于 2026-01-11 21:33:42 导出 122 条笔记</div>
+    </div>
+    <div class="filters">
+        <select id="dateFilter">
+            <option value="">选择年月</option>
+        </select>
+        <select id="tagFilter">
+            <option value="">选择标签</option>
+        </select>
+        <button id="filterButton">筛选</button>
+    </div>
+</div>
+<div class="notes">
+    <table id="notesList">
+        <thead>
+        <tr>
+            <th id="dateHeader" class="sortable">
+                <span class="date-text">创建日期</span>
+                <span class="sort-icon">&#9661;</span>
+            </th>
+            <th>笔记</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="date-list-item" data-date-str="26-01-09 14:05" data-date="2026-01" data-tags="录音笔记,数据中台,结构化数据,业务蓝图">
+		<td>26-01-09 14:05</td>
+		<td><a href="notes/738cd0a0660c9fdd567d900fab6a014a.html" target="_blank">业务蓝图与数据相关讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-09 11:41" data-date="2026-01" data-tags="录音笔记,数据查询,PO number,订单处理">
+		<td>26-01-09 11:41</td>
+		<td><a href="notes/de25de2499635650fedf2083c559c7be.html" target="_blank">关于PO number相关数据查询与处理的沟通</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-09 11:21" data-date="2026-01" data-tags="录音笔记,工作讨论,财务相关,系统管理">
+		<td>26-01-09 11:21</td>
+		<td><a href="notes/1377064d3bfefd0f68c89b99f1274d3f.html" target="_blank">工作相关事宜讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-06 17:01" data-date="2026-01" data-tags="录音笔记,主数据,业务场景,指标体系">
+		<td>26-01-06 17:01</td>
+		<td><a href="notes/3a266ae791124e2da22e6f863c50cf2f.html" target="_blank">迪尚集團case 和 1on1 with Chapin</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-06 15:57" data-date="2026-01" data-tags="录音笔记,数据治理,主数据,企业业务场景">
+		<td>26-01-06 15:57</td>
+		<td><a href="notes/ed502be615fe0d2b59710d8e736ca953.html" target="_blank">数据治理与主数据相关讨论及案例分析</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-06 15:00" data-date="2026-01" data-tags="录音笔记,数据治理,服装企业,数据平台">
+		<td>26-01-06 15:00</td>
+		<td><a href="notes/b1c7c2b5adcf2755a0f3da41529f3855.html" target="_blank">服装企业数据治理与平台解决方案探讨</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-06 10:27" data-date="2026-01" data-tags="录音笔记">
+		<td>26-01-06 10:27</td>
+		<td><a href="notes/23bbf3b03c7c48e4aba7c032b4904c3d.html" target="_blank">工作相关事务讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="26-01-03 20:10" data-date="2026-01" data-tags="AI链接笔记,人格发展,幼态心智,英雄之旅">
+		<td>26-01-03 20:10</td>
+		<td><a href="notes/64cb6802265f51c35b785c9dd6a2e64f.html" target="_blank">史蒂夫说400期：人格发展说明书——从幼态心智到成熟心智的英雄之旅</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-30 20:21" data-date="2025-12" data-tags="AI链接笔记,婚姻心理学,情绪管理,亲密关系修复">
+		<td>25-12-30 20:21</td>
+		<td><a href="notes/f7112dada004713ce4fe551fd832bc68.html" target="_blank">从破碎到重生：婚姻与爱情的心理成长之路——基于真实案例的深度解析</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-30 17:13" data-date="2025-12" data-tags="录音笔记,深圳办公室,达利业务收缩,新办公地点">
+		<td>25-12-30 17:13</td>
+		<td><a href="notes/f0948bd6f02009ac4157e04122cfa803.html" target="_blank">深圳办公室安排及达利业务收缩相关事宜讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-30 16:04" data-date="2025-12" data-tags="录音笔记,数据治理">
+		<td>25-12-30 16:04</td>
+		<td><a href="notes/0ff15a5cfc2bab2ad0a9c2fb412ab0b1.html" target="_blank">关于数据相关问题的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-30 10:38" data-date="2025-12" data-tags="录音笔记,数据中台,数据整合,数据治理">
+		<td>25-12-30 10:38</td>
+		<td><a href="notes/5e0af8989e8341aac98fd10e21b59da1.html" target="_blank">数据中台相关工作讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-26 11:00" data-date="2025-12" data-tags="录音笔记,企业数字化转型,数据中台,数据治理体系">
+		<td>25-12-26 11:00</td>
+		<td><a href="notes/be3b8662a8b535c2757fa965805a0a6a.html" target="_blank">企业数字化转型中数据相关问题及项目讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-26 10:00" data-date="2025-12" data-tags="录音笔记,达利集团,数据治理,数据中台">
+		<td>25-12-26 10:00</td>
+		<td><a href="notes/85bcd6b5b7a91ea43cdbff147b88e902.html" target="_blank">达利集团数据治理与数据中台项目讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-24 11:40" data-date="2025-12" data-tags="录音笔记,项目管理,团队协作,流程优化">
+		<td>25-12-24 11:40</td>
+		<td><a href="notes/7b09277e1093ad2d7ef17660922bc9a1.html" target="_blank">with Chapin - 数据中台项目评估与改进讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-23 16:02" data-date="2025-12" data-tags="录音笔记,数据处理,工作沟通">
+		<td>25-12-23 16:02</td>
+		<td><a href="notes/2b10403d17bea233eb4e77855a6c0447.html" target="_blank">工作讨论与数据处理相关交流</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-21 14:33" data-date="2025-12" data-tags="录音笔记,场地预订,合同条款,费用明细">
+		<td>25-12-21 14:33</td>
+		<td><a href="notes/88a486ef5935e4f24d17cd51c8e98372.html" target="_blank">活动场地预订相关事项沟通</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-14 16:12" data-date="2025-12" data-tags="录音笔记,婚宴,场地布置,婚礼策划">
+		<td>25-12-14 16:12</td>
+		<td><a href="notes/07c18d79fc0f9a0c029931e710537f62.html" target="_blank">婚宴场地考察与布置讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-16 11:32" data-date="2025-12" data-tags="录音笔记,场地管理,数据收集,预算分析">
+		<td>25-12-16 11:32</td>
+		<td><a href="notes/b3ffb145554f2926175b801ce4ad7d5a.html" target="_blank">Team meeting - Room Dashboard data story&analytics</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-15 14:29" data-date="2025-12" data-tags="录音笔记,数字化转型,数据管理,商业分析">
+		<td>25-12-15 14:29</td>
+		<td><a href="notes/cf948d9cd388c2430873daee54210ba9.html" target="_blank">数字化转型与数据管理交流片段</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-14 15:16" data-date="2025-12" data-tags="录音笔记,婚宴筹备,菜单安排">
+		<td>25-12-14 15:16</td>
+		<td><a href="notes/b703e8718f62168a87e0361d76801223.html" target="_blank">婚宴场地及菜单安排讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-14 14:34" data-date="2025-12" data-tags="录音笔记,婚宴筹备,酒店服务,菜单选择">
+		<td>25-12-14 14:34</td>
+		<td><a href="notes/befeadbde181f9e5123018572a371044.html" target="_blank">婚宴场地及服务细节沟通记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-14 14:20" data-date="2025-12" data-tags="录音笔记,宴会厅,场地预订,婚礼场地">
+		<td>25-12-14 14:20</td>
+		<td><a href="notes/dc19deaeadb5c5c232efdaa474a0b169.html" target="_blank">505平宴会厅场地介绍与预订咨询</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-12 16:40" data-date="2025-12" data-tags="录音笔记,消化内科,溃疡治疗,息肉切除">
+		<td>25-12-12 16:40</td>
+		<td><a href="notes/749854edd0276076a471e8ba57cf572c.html" target="_blank">患者就诊咨询与医疗建议记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-12 16:02" data-date="2025-12" data-tags="录音笔记,医疗健康,胃息肉,术后护理">
+		<td>25-12-12 16:02</td>
+		<td><a href="notes/7c7c6833ca59793cd096aa5fddbbe16f.html" target="_blank">胃息肉切除术后注意事项说明</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-11 14:01" data-date="2025-12" data-tags="录音笔记,数据中台,数据治理,数据孤岛">
+		<td>25-12-11 14:01</td>
+		<td><a href="notes/8830a91c602e072f42e628ab35a1c73f.html" target="_blank">服装纺织企业数据中台建设需求与挑战讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-11 10:39" data-date="2025-12" data-tags="录音笔记,数据处理,ERP系统,应收账款">
+		<td>25-12-11 10:39</td>
+		<td><a href="notes/3ee5397923a67c6f38789f4de0af7dc6.html" target="_blank">ERP系统WIP与应收账款数据处理讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-10 15:01" data-date="2025-12" data-tags="录音笔记,数据工作,数字化转型,市场营销,面试">
+		<td>25-12-10 15:01</td>
+		<td><a href="notes/bc774cdde0995ac4b930c04b2cf219ad.html" target="_blank">数据工作经验者求职银河娱乐面试交流</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-10 15:01" data-date="2025-12" data-tags="录音笔记,求职,职业选择,薪资谈判">
+		<td>25-12-10 15:01</td>
+		<td><a href="notes/380821fa0844a1f0078ee45fa3239243.html" target="_blank">求职薪资谈判与职业选择建议</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-10 11:28" data-date="2025-12" data-tags="">
+		<td>25-12-10 11:28</td>
+		<td><a href="notes/a91a39849642c84c86f594e901298162.html" target="_blank">企业价值图绘制指南</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-09 16:42" data-date="2025-12" data-tags="录音笔记,数据中台,数据合规,云平台选择">
+		<td>25-12-09 16:42</td>
+		<td><a href="notes/ea5226ad47385a62c1f96b1a88de5c5f.html" target="_blank">with KPMG - Round2 - 数据合规与云平台选择及数据中台建设讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-09 15:43" data-date="2025-12" data-tags="录音笔记,数字化转型,数据治理,数据中台">
+		<td>25-12-09 15:43</td>
+		<td><a href="notes/06b6f438ddb3cb42233d54f5cdb7a25d.html" target="_blank">with KPMG - Round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-08 16:52" data-date="2025-12" data-tags="录音笔记,数字化转型,数据管理,数据驱动决策">
+		<td>25-12-08 16:52</td>
+		<td><a href="notes/e4c79dff4788fbcfda9b9269e6d77b61.html" target="_blank">with PWC</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-05 15:13" data-date="2025-12" data-tags="录音笔记,康复治疗,腰部不适,骨盆调整">
+		<td>25-12-05 15:13</td>
+		<td><a href="notes/db6ccc106d91f797ed27153a18831bd3.html" target="_blank">腰部不适康复评估与治疗方案讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-12-03 14:03" data-date="2025-12" data-tags="录音笔记,数据管理,数字化转型,企业管理">
+		<td>25-12-03 14:03</td>
+		<td><a href="notes/5fb018aaed2781eb43dd39a1147c34e8.html" target="_blank">1:1 Meeting - 企业数据管理与数字化转型讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-29 15:32" data-date="2025-11" data-tags="录音笔记,婚礼筹备,婚纱摄影,摄影套餐">
+		<td>25-11-29 15:32</td>
+		<td><a href="notes/e03383fb499343b6f72d3f5be76c0d82.html" target="_blank">婚纱摄影套餐咨询与对比</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-29 14:30" data-date="2025-11" data-tags="录音笔记,婚礼筹备,场地选择,婚庆服务">
+		<td>25-11-29 14:30</td>
+		<td><a href="notes/3e700efd3d03a387f1b815701425380c.html" target="_blank">婚礼场地与婚庆服务咨询讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-29 09:17" data-date="2025-11" data-tags="录音笔记,预约事项,3D扫描">
+		<td>25-11-29 09:17</td>
+		<td><a href="notes/1e041620824070b1f56a3c90d86adb65.html" target="_blank">牙齿矫正</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-29 09:07" data-date="2025-11" data-tags="录音笔记,牙齿矫正,牙周健康,矫正方案">
+		<td>25-11-29 09:07</td>
+		<td><a href="notes/f3baf30f274d8cfa4edbf9113841a6eb.html" target="_blank">牙齿矫正方案及相关注意事项沟通记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-27 18:29" data-date="2025-11" data-tags="录音笔记,财务管理,坏账管理,风险控制">
+		<td>25-11-27 18:29</td>
+		<td><a href="notes/ef564573b7531dfd995c2b174c7fb1cf.html" target="_blank">坏账管理与财务风险分析会议记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-27 18:03" data-date="2025-11" data-tags="录音笔记,数据管理,系统集成,业务数据同步">
+		<td>25-11-27 18:03</td>
+		<td><a href="notes/7c4ad0d65fe0f18ecbf82efad6d9b05f.html" target="_blank">SAP與tinway的打通</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-27 12:12" data-date="2025-11" data-tags="录音笔记,CRM,系统功能,客户管理">
+		<td>25-11-27 12:12</td>
+		<td><a href="notes/2387ce9403ec27765fa394be93ff0abb.html" target="_blank">CRM 需求讨论 Round2</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-27 11:12" data-date="2025-11" data-tags="录音笔记,销售管理,CRM,制造业">
+		<td>25-11-27 11:12</td>
+		<td><a href="notes/3273dce8fe7e02eaad1a9f22756f11ba.html" target="_blank">CRM 需求讨论 Round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-26 15:08" data-date="2025-11" data-tags="录音笔记,数据管理,数据治理,数据平台建设">
+		<td>25-11-26 15:08</td>
+		<td><a href="notes/9bc7d8f4e21d6066a0c0a2cdb9af15a6.html" target="_blank">企业数据管理与数据治理策略讨论会议纪要</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-21 12:32" data-date="2025-11" data-tags="录音笔记,数据处理,财务分析,销售管理">
+		<td>25-11-21 12:32</td>
+		<td><a href="notes/0dcec552a7fffdf851c87331d5aec15b.html" target="_blank">业务数据处理与销售管理会议讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-19 14:42" data-date="2025-11" data-tags="录音笔记,财务,数据整理,预付款">
+		<td>25-11-19 14:42</td>
+		<td><a href="notes/de41b4beacfd0d0f3e0551029bdadb1b.html" target="_blank">公司财务数据整理与预付款项核对讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-18 16:33" data-date="2025-11" data-tags="录音笔记,人工智能,网络安全,保险科技">
+		<td>25-11-18 16:33</td>
+		<td><a href="notes/9b48aea01f6d2124971a7396b0bba651.html" target="_blank">AI conference Round2</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-18 16:15" data-date="2025-11" data-tags="录音笔记,AI,人工智能,香港">
+		<td>25-11-18 16:15</td>
+		<td><a href="notes/3733828c20c519dfb063ae362506963c.html" target="_blank">AI conference Round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-11 14:13" data-date="2025-11" data-tags="录音笔记,数据整合,跨境电商,项目管理">
+		<td>25-11-11 14:13</td>
+		<td><a href="notes/8da294696dfc62b249edf0ae5258db94.html" target="_blank">251111 Weekly Meeting</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-10 10:34" data-date="2025-11" data-tags="录音笔记,生产管理,库存管理,数据系统,添慧">
+		<td>25-11-10 10:34</td>
+		<td><a href="notes/672398a8a0f9928b79190bca2b24f206.html" target="_blank">AR+WIP(data from Tinway)</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-10 10:31" data-date="2025-11" data-tags="录音笔记,订单数据,数据连接,数据获取">
+		<td>25-11-10 10:31</td>
+		<td><a href="notes/4eeefc7db930c67a19c11c71f3f87a5a.html" target="_blank">数据连接搭建需求沟通</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-06 09:46" data-date="2025-11" data-tags="AI链接笔记,减脂平台期突破,全身力量训练,肌肉合成饮食">
+		<td>25-11-06 09:46</td>
+		<td><a href="notes/adc0cd0fcd4c475c174f11d7a4d55be2.html" target="_blank">减腹瘦腰的底层逻辑与科学方法</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-05 10:15" data-date="2025-11" data-tags="录音笔记,业务销售,人员架构,财务目标">
+		<td>25-11-05 10:15</td>
+		<td><a href="notes/6282e2f37f311023dea56edcc2adfd08.html" target="_blank">业务讨论与林生会议议程规划</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-04 14:32" data-date="2025-11" data-tags="录音笔记,销售业务,内销,外销">
+		<td>25-11-04 14:32</td>
+		<td><a href="notes/7cccf060d1a108215c46591c0d1e6b98.html" target="_blank">销售业务数据核对与人员安排讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-04 10:56" data-date="2025-11" data-tags="录音笔记,批line,数据填充,品牌">
+		<td>25-11-04 10:56</td>
+		<td><a href="notes/b692fec96460926e337a78009c21611b.html" target="_blank">关于拆分新批line及数据填充的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-03 16:40" data-date="2025-11" data-tags="录音笔记,绩效评估,财务流程,应收账款管理">
+		<td>25-11-03 16:40</td>
+		<td><a href="notes/e2b742562fd0023bf426009635910fdd.html" target="_blank">公司绩效与财务流程问题讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-11-03 14:43" data-date="2025-11" data-tags="录音笔记,成衣销售,内销与外销,销售目标">
+		<td>25-11-03 14:43</td>
+		<td><a href="notes/c716e705cfc15a8cd988b1242c7f1d8d.html" target="_blank">With Chapin - Forecast report</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-30 11:05" data-date="2025-10" data-tags="录音笔记,数据安全,数据评估,跨境数据传输">
+		<td>25-10-30 11:05</td>
+		<td><a href="notes/8158f6354e4e34524d14d1f867070958.html" target="_blank">公司数据安全评估与管理讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-28 20:18" data-date="2025-10" data-tags="录音笔记,数据管理,本地部署,云端部署">
+		<td>25-10-28 20:18</td>
+		<td><a href="notes/0d0dea93c91de2156983987dbac2bade.html" target="_blank">with Michael - Fabric round2</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-28 19:22" data-date="2025-10" data-tags="录音笔记,数字化转型,数据管理,企业经营">
+		<td>25-10-28 19:22</td>
+		<td><a href="notes/5d153399b67b52700411f616260f65c6.html" target="_blank">with Michael - Fabric Round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-28 17:02" data-date="2025-10" data-tags="录音笔记,市场营销,产品开发,社交媒体">
+		<td>25-10-28 17:02</td>
+		<td><a href="notes/76536b8037cb06e3875ed20b664bc79a.html" target="_blank">251028 Weekly Team Meeting</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-24 15:32" data-date="2025-10" data-tags="录音笔记,数据仓库,数据应用,指标平台">
+		<td>25-10-24 15:32</td>
+		<td><a href="notes/a0befef546af8a221d7e303caa581a14.html" target="_blank">with Aloudata - Round2 数据应用与指标平台交流及合作探讨</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-24 14:37" data-date="2025-10" data-tags="录音笔记,企业数据管理,数据仓库,数据治理">
+		<td>25-10-24 14:37</td>
+		<td><a href="notes/e8ae98f6d30789f4b9452b7ec9a97685.html" target="_blank">with Aloudata - round1 企业数据管理与系统对接方案探讨</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-23 15:04" data-date="2025-10" data-tags="录音笔记,财务管理,报表分析,成本控制">
+		<td>25-10-23 15:04</td>
+		<td><a href="notes/0e63fcb2fccfea34e45e0f712366dcf2.html" target="_blank">with YH - Finance</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-23 14:51" data-date="2025-10" data-tags="录音笔记,报表,发票日期,数据更新">
+		<td>25-10-23 14:51</td>
+		<td><a href="notes/60e5dc6f62655165aeb45ddab37e46a0.html" target="_blank">报表数据日期、筛选及获取问题的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-23 09:40" data-date="2025-10" data-tags="录音笔记,数据安全,网络安全,黑客行为">
+		<td>25-10-23 09:40</td>
+		<td><a href="notes/57e67510c1a3b96df4b84fdb20d2bf19.html" target="_blank">數據安全round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-16 17:41" data-date="2025-10" data-tags="录音笔记,数据分析,数据处理,销售预测">
+		<td>25-10-16 17:41</td>
+		<td><a href="notes/7828f5cd716451068e8bed2e4d2c898c.html" target="_blank">关于WIP数据处理及预测数据来源的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-14 15:16" data-date="2025-10" data-tags="录音笔记,天惠系统,数据查询,订单数据">
+		<td>25-10-14 15:16</td>
+		<td><a href="notes/5892414a850650a608ba2dece8cceffd.html" target="_blank">添慧系统数据查询与订单数据差异讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-14 14:03" data-date="2025-10" data-tags="录音笔记,生产数据,WIP（在制品）,销售预测">
+		<td>25-10-14 14:03</td>
+		<td><a href="notes/31fcbfa4fe93b9a810d9e70dd8cfed2b.html" target="_blank">WIP at FOB Round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-14 14:55" data-date="2025-10" data-tags="录音笔记,数据处理,工作安排,工厂参观">
+		<td>25-10-14 14:55</td>
+		<td><a href="notes/e85af91b3cdca50ac90c101b82fc3fd1.html" target="_blank">WIP at FOB round2</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-10 16:06" data-date="2025-10" data-tags="录音笔记,产品,还款,纤维材料">
+		<td>25-10-10 16:06</td>
+		<td><a href="notes/0c1a5e8058824c0210ba9ed3a0f73c60.html" target="_blank">商务交流与事务讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-14 10:33" data-date="2025-10" data-tags="录音笔记,市场推广,商务事务,数据收购">
+		<td>25-10-14 10:33</td>
+		<td><a href="notes/6256b886236436bd3af6ab6c0099193a.html" target="_blank">商务交流与事务讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-10 15:09" data-date="2025-10" data-tags="录音笔记,房产,合同,法律事务">
+		<td>25-10-10 15:09</td>
+		<td><a href="notes/13b6c47a5b6c681aa5ce13acf6d1c339.html" target="_blank">2510 Monthly Marketing Meeting</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-10-09 17:41" data-date="2025-10" data-tags="录音笔记,合作,手机购买,统计系统">
+		<td>25-10-09 17:41</td>
+		<td><a href="notes/7ad8e4418b9343fbccbf757c39ef74d8.html" target="_blank">1on1 Chapin</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-30 15:58" data-date="2025-09" data-tags="录音笔记,活动安排,产品采购,企业合作">
+		<td>25-09-30 15:58</td>
+		<td><a href="notes/1bf08c296c57410f9126aea1ad53c5c8.html" target="_blank">4th Team Meeting Round2</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-30 15:02" data-date="2025-09" data-tags="录音笔记,KPI系统,医疗流程,应收账户">
+		<td>25-09-30 15:02</td>
+		<td><a href="notes/5158c7b00886a29859241d3bcad48ec4.html" target="_blank">4th Team Meeting round1</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-28 19:28" data-date="2025-09" data-tags="AI链接笔记,三十年友谊,窦文涛 鲁豫,圆桌派 锵锵三人行">
+		<td>25-09-28 19:28</td>
+		<td><a href="notes/c5c7c7b741114fdf01e58ea86e9d8bf0.html" target="_blank">鲁豫与窦文涛三十年老友对话：从职场到人生的深度漫谈</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-16 16:56" data-date="2025-09" data-tags="录音笔记,业务安排,快递业务,公司事务">
+		<td>25-09-16 16:56</td>
+		<td><a href="notes/b581549799a84eb5dff1e5596b41c584.html" target="_blank">AR 报表和Power BI的推进</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-12 11:14" data-date="2025-09" data-tags="录音笔记,工作事务,杭州工厂,费用管理">
+		<td>25-09-12 11:14</td>
+		<td><a href="notes/803bbc1a9980000b1f36592cff809dc4.html" target="_blank">工作事务及杭州工厂相关讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-16 10:03" data-date="2025-09" data-tags="录音笔记,市场营销,数据管理,业务合作">
+		<td>25-09-16 10:03</td>
+		<td><a href="notes/9c6eaadb3c9144f94e063ff3f7a1cc94.html" target="_blank">第2次meeting</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-10 15:11" data-date="2025-09" data-tags="录音笔记,达利集团,组织架构,业务模式">
+		<td>25-09-10 15:11</td>
+		<td><a href="notes/28f76ab6ceff3cac031dfc26de7167ea.html" target="_blank">达利集团组织架构、业务及工作情况交流</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-12 12:21" data-date="2025-09" data-tags="录音笔记">
+		<td>25-09-12 12:21</td>
+		<td><a href="notes/d139e8ed79e9f5106ae6eb414c4afd55.html" target="_blank">难以明确核心内容的交流记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-12 10:34" data-date="2025-09" data-tags="录音笔记,上海,无锡,郑州">
+		<td>25-09-12 10:34</td>
+		<td><a href="notes/20ecd7d14b7f215d3a575d18b2747ec7.html" target="_blank">难以明确核心内容的交流讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-10 12:15" data-date="2025-09" data-tags="录音笔记,财务报表,年度预算,报表系统">
+		<td>25-09-10 12:15</td>
+		<td><a href="notes/65d208dbbe9c950e4dd77479bbfddab4.html" target="_blank">财务报表系统使用与数据整合讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-10 11:58" data-date="2025-09" data-tags="录音笔记,预算制定,销售预算,预算流程">
+		<td>25-09-10 11:58</td>
+		<td><a href="notes/0ccc69680ee880695ca29022cf5c97bc.html" target="_blank">2026年预算制定流程及相关问题讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-10 10:58" data-date="2025-09" data-tags="录音笔记,财务分析,预算管理,人员成本">
+		<td>25-09-10 10:58</td>
+		<td><a href="notes/601cb2a1f8aba83fe9b410467a07b3c2.html" target="_blank">2026年预算讨论会议记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-10 09:58" data-date="2025-09" data-tags="录音笔记,财务管理,预算,资源分配">
+		<td>25-09-10 09:58</td>
+		<td><a href="notes/5f527a363a44b734e91a6416add3a3c2.html" target="_blank">2026年度high fashion預算指引</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 15:12" data-date="2025-09" data-tags="录音笔记,数据管理,AI应用,报告分析">
+		<td>25-09-09 15:12</td>
+		<td><a href="notes/086e3a7804b0c929d4b49782f934bb1e.html" target="_blank">数据整合与分析的挑战与策略</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 16:47" data-date="2025-09" data-tags="录音笔记,业务管理,数据处理,柬埔寨项目,AI">
+		<td>25-09-09 16:47</td>
+		<td><a href="notes/a7b96ed30b134a64f959fbe3d10568de.html" target="_blank">业务推进、数据处理与AI应用的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 16:20" data-date="2025-09" data-tags="录音笔记,财务核算,成本结转,营运指标">
+		<td>25-09-09 16:20</td>
+		<td><a href="notes/2295626b884595160fb19d081201d187.html" target="_blank">财务成本核算与营运指标分析讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 14:12" data-date="2025-09" data-tags="录音笔记,财务管理,数据分析,报表整合">
+		<td>25-09-09 14:12</td>
+		<td><a href="notes/fe01736a26030786392280612cf2329c.html" target="_blank">财务报表整合与数据分析讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 12:17" data-date="2025-09" data-tags="录音笔记,公司服务项目,收费标准,资金管理">
+		<td>25-09-09 12:17</td>
+		<td><a href="notes/6f49ded14bf18dacb28f352f30f66526.html" target="_blank">公司服务项目收费标准及实施情况讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 11:46" data-date="2025-09" data-tags="录音笔记,工厂成本核算,报表口径,闲置成本">
+		<td>25-09-09 11:46</td>
+		<td><a href="notes/e0cef42d72259d269bf606c3bb4e98e4.html" target="_blank">工厂成本核算、报表口径及闲置成本讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 10:47" data-date="2025-09" data-tags="录音笔记,财务管理,成本控制,共享中心">
+		<td>25-09-09 10:47</td>
+		<td><a href="notes/b7e7b5a09ba7c6cb58c6446bdbffc12e.html" target="_blank">共享中心与阿米巴收费模式的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-09 09:46" data-date="2025-09" data-tags="录音笔记,财务管理,报表分析,数据整合">
+		<td>25-09-09 09:46</td>
+		<td><a href="notes/f3fb3db517ac2c821ddb4b13e414c984.html" target="_blank">财务报表讨论与数据整合会议记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-05 16:09" data-date="2025-09" data-tags="录音笔记,业务规划,品牌定位,市场营销">
+		<td>25-09-05 16:09</td>
+		<td><a href="notes/c9189ad9b2ba7b0ce941c9e8bb8e0983.html" target="_blank">250905 the first meeting with CSI round2</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-05 15:31" data-date="2025-09" data-tags="录音笔记,销售,商业合作,市场推广">
+		<td>25-09-05 15:31</td>
+		<td><a href="notes/c1d8980ae27401439760c3fb3c226ae5.html" target="_blank">250905 the first meeting with CSL</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-02 13:05" data-date="2025-09" data-tags="录音笔记,公司业务,保险合同,财务审核">
+		<td>25-09-02 13:05</td>
+		<td><a href="notes/2b0c94966b161441148acd13c027d50b.html" target="_blank">工作事务交流与业务安排讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-02 12:02" data-date="2025-09" data-tags="录音笔记,AI,电商,数字销售与运营">
+		<td>25-09-02 12:02</td>
+		<td><a href="notes/e63af7313d3c49902304428704201007.html" target="_blank">公司业务讨论与分工安排</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-01 13:17" data-date="2025-09" data-tags="录音笔记,服装产业链,面料采购,成衣制作">
+		<td>25-09-01 13:17</td>
+		<td><a href="notes/7a3859970c3b85c16291a51ffe9f8011.html" target="_blank">服装公司产业链及内部流程介绍</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-09-01 12:52" data-date="2025-09" data-tags="录音笔记,业务团队介绍,同事认识,部门对接">
+		<td>25-09-01 12:52</td>
+		<td><a href="notes/c4e6d02966181e31c5832f447fe22491.html" target="_blank">公司业务组介绍及同事认识交流会</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-08-13 16:11" data-date="2025-08" data-tags="录音笔记,数据工作,数字化转型,市场营销分析">
+		<td>25-08-13 16:11</td>
+		<td><a href="notes/94dd2c289c404388300c582f3ec67ff2.html" target="_blank">数据分析师求职银河娱乐面试交流</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-31 21:55" data-date="2025-07" data-tags="录音笔记,硬件回收,AI开发,北京">
+		<td>25-07-31 21:55</td>
+		<td><a href="notes/9c26453d829860459a6abd8e55aa6656.html" target="_blank">关于工作方向及回收业务的交流</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-28 16:55" data-date="2025-07" data-tags="录音笔记,offer说明,薪资结构,报道地点">
+		<td>25-07-28 16:55</td>
+		<td><a href="notes/3f4ceb42467148253e3d90d1da3da900.html" target="_blank">达利国际集团offer相关事项说明</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-24 14:46" data-date="2025-07" data-tags="录音笔记,公司管理,员工福利,培训晋升,AI">
+		<td>25-07-24 14:46</td>
+		<td><a href="notes/7c70163c37f03023d6b1cb26b12c7311.html" target="_blank">High Fashion公司HR与洪亮沟通入职细节及公司管理理念</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-24 14:25" data-date="2025-07" data-tags="录音笔记,绩效奖金,薪酬福利,年终奖">
+		<td>25-07-24 14:25</td>
+		<td><a href="notes/48ec51309612a3354e3690acc9ce1d64.html" target="_blank">集团绩效奖金与薪酬福利制度说明</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-24 00:15" data-date="2025-07" data-tags="">
+		<td>25-07-24 00:15</td>
+		<td><a href="notes/3cbfb12954ed5c1ca34aa40729af7204.html" target="_blank">谈判技巧四步走</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-23 22:00" data-date="2025-07" data-tags="录音笔记,求职,谈薪,职业选择,薪资结构,年终奖,数字化转型">
+		<td>25-07-23 22:00</td>
+		<td><a href="notes/29958c0d8fad53274ceeac12f9c7bae8.html" target="_blank">求职谈薪与职业选择建议</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-23 18:44" data-date="2025-07" data-tags="录音笔记,薪资福利,入职时间,奖金结构,员工福利">
+		<td>25-07-23 18:44</td>
+		<td><a href="notes/097b80684c9f80393953791574e6a513.html" target="_blank">薪资福利方案沟通及入职时间协商</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-18 10:48" data-date="2025-07" data-tags="录音笔记,公司转型,数字化改革,团队协作,CRM">
+		<td>25-07-18 10:48</td>
+		<td><a href="notes/03ad6b5441e3e619eb99a08733717d12.html" target="_blank">公司转型团队岗位交流与工作介绍</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-01 12:32" data-date="2025-07" data-tags="录音笔记,管理后台,培训,会议室管理,香港">
+		<td>25-07-01 12:32</td>
+		<td><a href="notes/c01c7fbe8ef50da95775c3de4ed59713.html" target="_blank">管理后台培训会议记录</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-07-01 07:41" data-date="2025-07" data-tags="录音笔记,亲密关系,幽默,情商">
+		<td>25-07-01 07:41</td>
+		<td><a href="notes/2145276aff3d77d0b14e05dac320140e.html" target="_blank">亲密关系中的幽默与尊重</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-26 18:28" data-date="2025-06" data-tags="录音笔记,AI产品,产品报价,AI">
+		<td>25-06-26 18:28</td>
+		<td><a href="notes/20dd96b971fd931ab74eb8dbe65135f1.html" target="_blank">飞书AI产品报价及功能差异讨论会议</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-25 16:15" data-date="2025-06" data-tags="录音笔记,企业协作,信息管理,AI应用">
+		<td>25-06-25 16:15</td>
+		<td><a href="notes/b7e28738637c3b564047a5e1dbf3665f.html" target="_blank">飞书产品介绍与应用场景探讨</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-23 16:37" data-date="2025-06" data-tags="录音笔记,企业数字化转型,飞书应用,CRM系统,项目管理,AI应用">
+		<td>25-06-23 16:37</td>
+		<td><a href="notes/ad2071ba5d8294d39794c9feca408b4b.html" target="_blank">飞书在企业数字化转型中的应用探讨与规划</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-23 08:25" data-date="2025-06" data-tags="录音笔记,团队管理,创造力,6SIGMA团队">
+		<td>25-06-23 08:25</td>
+		<td><a href="notes/d5d64ffa36987ae523163798ff6ff29d.html" target="_blank">6SIGMA团队创造力的特征、激发方法及后续课程预告</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-18 16:25" data-date="2025-06" data-tags="录音笔记,AI,结构化数据,合作">
+		<td>25-06-18 16:25</td>
+		<td><a href="notes/2f2aaa06e1a91dfad4b0a724e7d7708d.html" target="_blank">AI产品功能、合作与成本的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-18 15:55" data-date="2025-06" data-tags="录音笔记,AI,产品介绍,市场应用,香港">
+		<td>25-06-18 15:55</td>
+		<td><a href="notes/fd7029b9de85d7557c5c89dbbb471683.html" target="_blank">关于一登公司AI产品的介绍与市场应用</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-10 15:44" data-date="2025-06" data-tags="录音笔记,销售报表,系统数据,财务分析,ERP系统,CRM系统,AI">
+		<td>25-06-10 15:44</td>
+		<td><a href="notes/eb812c44ed5431c30382d719504910fa.html" target="_blank">销售报表相关问题讨论与优化方向</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-04 15:57" data-date="2025-06" data-tags="录音笔记,大模型合作,模型微调,数据采集">
+		<td>25-06-04 15:57</td>
+		<td><a href="notes/b0d1d251253aa5ab96f8b789cb3bb73f.html" target="_blank">关于大模型合作及相关技术问题的讨论</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-06-04 15:38" data-date="2025-06" data-tags="录音笔记,AI,大模型,企业智能化">
+		<td>25-06-04 15:38</td>
+		<td><a href="notes/8ba184fe2578c856ef01cf976867c214.html" target="_blank">大模型在企业智能化中的应用与挑战</a></td>
+		</tr><tr class="date-list-item" data-date-str="25-05-28 09:54" data-date="2025-05" data-tags="Get笔记,AI时代,语音转文字">
+		<td>25-05-28 09:54</td>
+		<td><a href="notes/f21907274eb5e5fd654440cd21f455b6.html" target="_blank">👏👏Hi，欢迎来到 Get 笔记</a></td>
+		</tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', initIndexPage);
+</script>
+</body>
+</html>

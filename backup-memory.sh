@@ -25,7 +25,7 @@ if [ "$LOCAL" = "$REMOTE" ]; then
 else
     # 有新内容，添加并推送
     git add -A
-    if git commit -m "自动备份 $(date '+%Y-%m-%d %H:%M')" && git push origin master 2>&1; then
+    if git commit -m "自动备份 $(date '+%Y-%m-%d %H:%M')" && git push origin main 2>&1; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] ✅ 已备份到 GitHub" >> "$LOG_FILE"
     else
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] ❌ 备份失败" >> "$LOG_FILE"

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服装纺织企业数据中台建设需求与挑战讨论</title>
+    <link rel="stylesheet" href="files/style.css">
+    <script src="files/script.js"></script>
+</head>
+<body>
+<div id="jsonData" style="display:none;" data-json="wFWWPUFi&#43;4Uyowxvw2u8IkKBWddP1nvumvIhSkN/oQRTwAIAzoCKfHnWzhXGlMLJOO28PT37DobYDQijFN6FEs/4h7tnhlpSocWraVjUdZxvrpd5QeK6iL&#43;6MUv86Y98ghoctTItCn4hVpta&#43;vRYUdRhbVfJHJOrzMN7IgRW2SApB88F3LP0jO0hQCEDjXPXWqNgcIPOKtvHcxRp7iapYMO1GJ852&#43;H3hCe4u4T9dcsEQRXG5lIGBnEW8WUQ0xCYU128zYwYQNcV5h&#43;C1EC9cL07XFBsSzpUKFP1T2IwriT2lSah72aZNYrQaVpw8FjigAcSjn3qJef3WGrDAM2m/a2/k/fCplKuaAL9bsyrw63ThjcMxyH/BOXM4Q4Hp&#43;HqNYnXPY5J1c/SZsI2qE8ilI8bLOe8vZR/fpTXf92BAadHwn7bB5mtRqBqC5A5RbZ5/aEF13N6y5RPQqWQjUyxMyReStoza2RBNPAHkbdQaK0R29TlyVNfoJW9nCOJpzk1FKyYs4nTqQ5AUKcwDeMA5mBB7PAgxykDmzNO9Ep8TEkqLlKWGspjkXPHuzHNUmPzR2gdMAvUMJdmKLLkTsGAnDMBfQe9/sFYKB/1Id5CyZIJo0oajwmU2EqBCPeegwf0LlcRCL7Uz9b1/34hIj03LPpkCIjk4koLpWgPG3tJPGG55hqk48Aypa9lmu6iVgOJzXUFgwcDxkl3Cd5IzSy0MvFH6urT/HjPmLEiSlXUHNZC&#43;RmllXxTHJUUIaA8kjt9c12Dbtk5W6nnksXIeVuXixSrUdx4r2IIjtM2nFW5R8s1pQe/Avmrm/DIEQyMWPK7FwIOyQ72Vps&#43;/1lUx8yKXJJEcpjQdS1VhJQrBTOFzBgxY1EYv8MtYctYQ8J1CrHVQx0iPwDMOXj0GDeSDctGMRuWSXF468eT&#43;MP2EG6ztCOkWGpgRrI7s8tt5mehsiI76sy&#43;ujBb/zFfjJthKazUiz2YtH2JRycqHYONhG&#43;D/Tn&#43;IH2iql8zUlCXf/L2MwRI0guVmmSXmZAn1Fukau6Jmk9RnrqrK&#43;QRvmWKWN2rflWSr7zOMwoZ4Vv7xXPH&#43;P7FjoS82A78TwD7SNMvnQEbDfuC&#43;qcGsLyVka1UBeYOHR2pEwjP/cQkmTpagsYT/NyUhhvoLXlO3AVCyTY7jQjQP&#43;3FJrFaZQmQ6ukvBqBQ7BWU9BrXtKk4msAV3nAD7kOonbvl9LtSpzjKROTf3qpeb9cx9nu4C7KevJNeI4VkcIE/XKvJ00dBxN9X0of73sNofkNP0ISTAAjQC4elzUl6/UDz&#43;B7Mb4r8&#43;GhU0fG9JQt/nLDmeNhirDcIJuHO7vlrj8QZTgNuxfI6F5LY8xDb2hO89qjn91/O4k7BQeOWnQ1CG4h9wjTN/hZi5A&#43;OMIwikvchpbBGds0spuAOyaNezjFYkzUOLz86Ps6APpIUHvbcL9kZbbynS2D5GdFJ9kF7ULaeRo4kBs3P27BSSZ0ebGaFYDOJE50pxQ2Olx6s5FOlbkohtFS&#43;ovC9Bo1VpPouO/JskCmJtPKQQpQFkgSMZC9YKxjOk8Wo&#43;i8UTuCys3TI0oVNLsS/ye&#43;BdAobn6ZDRM1owqcPdNUUIKIUQUjkn7VIlPvgULKV5W14dZrZELidIw1urLU&#43;jh/jdKdgRtF9z0lThwcnJEwhJFCmRTfU085ACENbcqSVibOmk2qce&#43;m&#43;Ym4Cx8a5k5PNzA37FfJWhaJmbobXDg7j86wCWxIbpzyqPTNtY&#43;MdGCeB3UWwxhUZemCv42rzgoOv4BA5Rx6qootFfy5jiCVj0kjvU3D3YxMAj2pc9ezf6ZiUclACuOtij/zub40J8M&#43;sc/qgF/PZFnGFpc3UYWstHN3DteaNeaoKpdcsYB9cPd/rBRutqJeHhEAy8l/sT3aiZAwIe5oOBeG&#43;8YZQdzDfxxnFGpUc/wwrG4n7NH14t0yutNLYC2HsQKuHunmYZMs6P/4SsbyF/blsDEKG6QgcAkIBDzoagdlSl/M6ooDq9Ts6vAL1l8RR3M0K6RysPkaPG&#43;nHqBlP9TSOLXolwVXQbjqW0xygf3R1nM6x7bVGR6d0nioe&#43;auWS58a0FGRB7luWwvTKW4mJ5l6h1ZEleTDDphkCc50VRkeiMEeJFnAhulgZ56S86JTnCPtH783j8/n2XAyqc1pRYIH7svRpULYvmnwCDZsUAubx78KB3Xxq0x&#43;Vh6iNkx6taZYtDWxxTeNONt&#43;U5l0cy1IwemHP8/AMCwW&#43;rdWW7iYSQqGJf3SRj4/y98Ch34yI4vPE45icoOnrdOpPZt06GDWwTx/duLzN1C00bAPO7dSLH3Xem87ZHRgafgjsRlM9MA5tJtpotSCcsd1yOJIRYapFj/qNz7FsqLPVRJ0KdzREk&#43;0hCIy7D6WDmeyU&#43;QGVk5DnVnXY/7l1m/fR/Y5J8snKMBOIAF0GqAmzn1W2NvKcFLZTgM5tGscu&#43;jy3WtYBoRSQWVhM8zgAxr/aVzsYGMM/X11KAfYcFzjeZ5XgDSmiAzV8xIhbJVwH8La94oVFib6NqEFUtbJn&#43;5&#43;P8CgHWTEpBNA4GJKIkAL5Jt1pGtzCvkidOWkhSVsbzK9Rn3A/ZY2Klpd7jOTBOi2bjlwvH5YveTjx95D7o6bL8CnZXd/LjzbunmJcB8OTryIpfqRR&#43;pML5ygKGX&#43;7pyh/hr9FBQvgEXz&#43;CmNcbycTSQ3pbGZHmWi&#43;p6V2TMXifOAI/14FXQR8KFuliQY&#43;RYtrqQGmYUcbZp7P2mpV9eQpo&#43;JULXwC6Lfi5G&#43;TpsWLrQy8Ci5IysEwdU0pub2iwGWjEMCNSpTdBir8G7IRDclpIJJ0M4snAIwLE6VI1JnTyfUxeGZS&#43;SqGWE/Qc7ixv3sbFCiOOIh9Yfb0voFxjD3E5vOn3EEBbveofKN1RBrpAT94baf&#43;WWIBLm8/b8ofsaVdqF2Sp8y7RujQqCxNI7a4dU7pKbV/T3CZPnssenbqFCVAckYMaoKjctfKBD6gnUuSs7S4lEB&#43;olgqYo5&#43;692CGt6BnhCgI0S6ksDQFdAEaqJqcE7P/4ooQjoski0OCs4G8smBLXZZ4RW0EPmrZQlQPK0LUOplZB0bqQ05n/L69YzU7AW6gBGc598KdiNOLs/xRokrYhCCO5MGMo1VURT5EsKNsnSU4qiUKzWjakSfcevQLXXmu3SreS1P3WDzyqPwKZD&#43;217U6ZRM8BrrS0k7V7kU5WdtQyjNZWnC9jK9gUyMuD2E1TfCEIvy34fqpkN8POH1pZkg&#43;FOz2Vf4eJthLDc9zvPFlgBkePrQugXJ49Tc1suYso3vQPIduWtnYlkkrtGP/JSFWsai5vBW48XYdi&#43;zCaVg5lI7P3u9N7uoWB0DyGmqU82wsAfknuZOsRi3LOb2N616NyJeT/rxDKrKkogfETvpx5NYYUTFmEPogEqMZzC17wrr/5g&#43;weN5zfLvh3GIvxlDSEw0U8Q3U8wbI5r2VcpW9N/Db0WfZOdSVaWzmIShw5JqTAWMFDmh6Y&#43;XSDc9/T9b3eFO16ppEqcNL8fqq0vZxDVcaNgb7Db&#43;1bNlp7r74plMReIRuHjM5DWdZA/r0ILuxp8QObOHx5DFJHJp3ZcMxOl6YebRF5zC61kBhz70YQ62Kdjy0Vqwrys52qYT1cnNxVi&#43;GADCIyKxJcfXcZ5b&#43;tRKJb4/Vqf&#43;0kMxx9L5VQyEMt6S988WJ7swUXBQZXfb/yej0f5Nu0CX7yg3962zKBS5LqnDNcDiIZc9kwLvNxsCJ2yMfgn2gS9ex5249DUlFd216RgOJIr6kJeO0q8TW2wy2Xr4kXzaK8aE63tT2UzaicL/x6qJvflgoEN7fmxvXNmuOQXD0aZZBvv&#43;KaWg3h8K9J&#43;/0aAj8J4J7zJAa42y8y669CFkMR&#43;3PKT691asQ1/oiZLMTQRvBN3AOmeL7vWzytYkwKTTs3e0f6&#43;2xHc/NrwHVqUBDnCtQOc/p4YEyfsET//bc&#43;&#43;B40NSbfIrQwrbr7eEKxEecWn8vqqwRH&#43;u8VcmOEGPzIm3X6Wwh8nOgaSJmnDhramkjA3EuHwBmlMtrNO&#43;O9xCr/JmFQmT3jxL&#43;C5rAakh6FhsXKiNJWEb4cpbE0&#43;a2IfSEpN2pPCMXSXNisOEUlops4OnCkBLJP5IuTrOmWPNi9tQ3aHhRY9vV3shtacNpnunltd32ubmmpbeMxON5faduiTDy85JAO1giUSp0YieYkYbjiSetL3AfM9EsCOuuuiBNJbvjWsSWTrJXPC&#43;bWbEhlDxqyu67Bz1npFhMtAten1J1WUBGdcf5hn83Riq04ari/0pyYqZQzdrjCF2GLiQl9ovkMR7drnLCQFaqoNzwN2sFHdvfj/AraeMC2cftUVI73Gw1Aoe5qlyqi2KMBgp6ZU1czj1wt4HnDwUZaTswuCzTX0xmBIJz4KKsuUWV2HITdvrryimk8mmGaNEZ6GRLXpOtXjNBMk0o2EOvVnQKOma8S93HI8bX86HIfvLJXKg56OUn6x01YMxAFaOrZbIBVoclRj5/wEcN6LlXPZBiGs5V7qyRGKNLngQ7Qt&#43;VRYVPx7&#43;hlw9EvLpzJ/jGV4Qx6MD7hpW32EqhFPLMgqXdxptR5PhRl0mjHayAplY5nwN/pYqltwEgzMeOHbbPQosscr&#43;zEvHsewhjmaespk3D5N&#43;ClFJnSTBxLE2OxBHyDszY3P9&#43;c7UU5&#43;JzIFu3ieQBKy4WEddKVTET/dvWylhMt52wP8XkF0Q04svO/c/&#43;yhBGLDzkvN/uRfy0AE5GvgXjln4ZROXh3TtHGBs4DJyWRiy/qlHgK&#43;DkcoMHZOnh5UAoQGZZu/9&#43;paI1yW0tClYl5k3tstrlMpPxKtyOHUI7ftfzzVhm62A/up9doHLcRiWs0Cy&#43;U4hQT0JoLSlyyVTDd58V42xzkRFToUG&#43;E2a/mD5GeH/ce905QVkO0mN3An8VpQzYHd2ydVyVJ5HGTllYZTCPaF2O48tdew64GMS37FhjyeQRWg8kzjeskhzecFSMdY9hDIGWUOlNDN7NL8lrvvZnX543nBdShhwsjulvKrFW/4o7fUewg5DqoUWQTLSDLKmJmcASg1Pn6/x4/J/p3WbCfvUqShjDxjFe0tQz8wU4dbqoYeX2GCvWcpI70LjaPdTTFPrIW0Z4gttXjJT0ycavzlTueoMUx9cHWJuvXcmxDR/1GqxJPn4ggfwNg8Gy/wnuYFlXUvLamibTtu0mal1hPq/alUFIXKwhNvLbuufoJam2BIN5Age2msaBZsBxSn3wzmT8UEzbrP1exbCdUSsEqY4Cp4M6wPRHEl6Tvym&#43;3o2CfvveWEPCJj8DPW8zVKLs2wT5q6rsCJvvi5elh1gaCTduS6fmcAWlEIt/7IBSKdCUeacTtDE770u5L4UdKcF056B8RT&#43;bqv5RKYSZI9eBUz83pi0/1OHkRirQ4NcscuUdp&#43;ziTD1rbt6e8QBKXwnQIRWGPH0AY/J4ctEdBtB9&#43;tsIBlLpxGNayG7H8dZxV12lG1egh9e33wwmFEAP8OhHaXjukqT&#43;pU1gCptldtZMxHb5UlcoA1LRlOcw8QZrhJptBOViBgfrISO3TlVETOWJM&#43;TRzTsEcDLk1UwBoZDrjdqRbHKF8YhJTiP0d3icVJ59gg6iVcW95&#43;5JyVVJ3G5HK5f3KJWAbdnLEl0Ym9T37pBIPWMPyV61UdkwDDlb8BqPfUnfG5aB8qQ844N/Nv3IpGSIfabBKpuTPPJyiUgLV6jimnSROSxv&#43;qi1F&#43;MF7xujGgIDHRX4KprQjW5axxLe7&#43;K1TwySGJZmTYJ8LJe1sIDXigfT3Ws4xXLq/vVespHbQCpUvO52qjwJdskcWxVOe97vbZ5VvX/qJQKoFkODP2QJpCuimlTOFo/uvPIBgPNVVtRqqafFnLBj6rhdOzPq8tZFzcA2JrFpZFsrPHqMFQz3JdL4qvqgm8EJvBHNykR/eFd4gnK4k0WN2AlTSdh/n/pwaOh3sUZPndrW6f307FNmGpTdIIIEf45SXb7By/qjYw7WfcqIyD8XcQqYLWOL4ZOU5YeSpuYsnqwOcfXef3z&#43;&#43;Tk8ZVMC7OBb21ksvqQloa/S2zPQrzz4ujom/NdWYlDBNWVpiI7veCIDBWHFlThKIUxC3Icfe9Bhc5GLunn9rbRFPGdvV4LIEvR553QlieUscKxrs2ffqnGkP5LiIrJhNdkwopY6FcW2tLhOXY1dAHUoxAghjwvqj5CVw6w0GhqmO3LP9sGYLW5Cbv&#43;FSDLjCEmuiDowdFE&#43;O4N7oU/fviuF32DUoJXnC0BVw&#43;nSbIG3DM/fBXAL4pqTbneVC5oRZGwWPtuP9EPzkfHMIN9cA1iiFzU74&#43;2a1fdmY2OlrrEF62uxtibWjA20gE3r&#43;wiywDqzgUnpTTR1iNcXQFlne7h8KNsB9fWUEotS252vlELtkWA&#43;3GXJEGIRJ4FX/bqlbz39Nij/kRMyU5Ak80Loa1bo84N4sfQ4Q9hEN9N3xkZtZstKQN/9bXOYF2mKaF1yDquqWCNZdy5ydJ1Vgk3O6T7/rlTIs8jcvz5jtQRMJLF28ao7aDv0QyFu7AIJz&#43;LBaVEzlywnzGzjm&#43;wJa8dUo4g9OY0MZcmwVa6O76ptBH4grcx88K7jnb6iwQOou8IDYb&#43;qcvfFEztH3oTC&#43;puk2WJ&#43;f7uPys2IkIgAKbyYmplDzRsh4Ds3/jZrMw9NSo6722tBYZfV3GwwBDKf72Lfs87tDEJbSI3DGOza8J4VuOT5WFjDxYw6aWk4MDFnbLZJuQ4f6GJ3NyeTVtGhjKQIcI2kX2ynoTjQk0sXnKmoQAkUtGHreq3ZK&#43;aQ0e5rf/vQFs&#43;04cP5jVldAniysokOLc5yupfiblKELgzzs0oS/g5H6rODVYeiDdXtuo2jOrCz2xnP1tRV5mZ8S7p079uuUgib0/BFBZxK&#43;&#43;i7LJPfzqHuaMwSMIKRwKA7qvzNNPsHeXJDNnsr4ZUu09WhPAxwzBJ3Li/VEWVAxsnVp82GspphaBF44MwP1zR4ZF6KGPxHGdsSTiv0Y&#43;nPG2v85Q4BORedqMA3js4ZPHqOCon95Wo9OyYVdCqQ6jhfVKa0wTDRDKagY3A/lhhmJUFVecAV&#43;yJN/gDpAmW1SfOi5LcQghfWB/xRRH7GY0sAQBJ7m&#43;6vl1Kt7qKtoavSI386zn&#43;/h78YdtGgRK58bG7TuXmTHZPtRVwBZHfDlH4wdoSxkbIPxgkk6jlOHSsJSkv2&#43;Xmx7VjNaRDlENXveNZnPJVt/SzNUTdxNmXMSkiDndFQ&#43;nLuREKSjjThwoqFNBeOhfHcnK/1gL8PY55UF2Z&#43;khUlgY/Am14CtqJQBQmgogCk5xDQAdu9jIGMgf1zabZluAczi3xBIPQ/i9l07AFCUNujkIzyJWdNx1ptXT0kpe6/yguoPlIgOTHU&#43;BrE816RsS6n6PT6qpAEQqWvVZIiX852et2cUL7LHu7Q42LV/A6mFPaMD0tmM5ebC2j5gKEKe91iAjVM/M/BMZq2FsHHI6/h3EnHlDHPObm965WMCPXTGA4pGZRYfiSOXrBO4MYaVf1UIOnt&#43;fgS1DLIgJsyRLbMjq4OHs7RV7d2ItxYJWw/7SQqiR1DHcRiUf0H2duyJnha3&#43;xYgia6DobY7FcRoV7FGqH9MCZLeSoneZfBwN2SW5fDr1lATw4nBQ8qrDfSaM&#43;DUohWLcCIjX0/Gyclp09aYs65yIpzaVdD2aHu5lzScRmdsfYyGz2wp0z&#43;1LOpawktQbHgwZABDNP5tlCsHwxSllilTCtPwM3r02YFSX9RoGNFCqtNlS0Y0VLVFG8Yfp/ws0LN&#43;ckTRaQVSyr&#43;vDxU6DoEBgMBcPvI7yQd1np4Ts8RqCYA&#43;fatVRRZBPgcRYGz/Xp08C6crTlPw8TNxKzh/iDl1CHAL6pYCULMyrC/Pxei9TOV07VotB0sJf4/pEwDVzZJDW7bDqBd8jSUKbFqHaJllbleF8J0B/gtrYX2BLq7RDF6YoolWwEQbSfR7sd/FeYPHqeAnGInth1LkmHWfPuwQ&#43;Cf7r32zQojcT&#43;nNksfiYzOFmITb0wK/Wse/fcmgmWDH5j1nh2ao56BAqXDZFPz4sdXCskeE2fqDGwHHLx0OTVOhdmO2JL9VQBEbvxmjo&#43;wSCZC0euvRUSpIUpA/CkUjDbjFAU6cUW2cXqAE36M3s6Mu9vRkct8rhMfc8mLt2yOmYkpiyg&#43;dVJp&#43;fYglmhYjvSTk5kudALZMjVZYNO9JBJHuPAFaj&#43;Jx89QJihR1nBkYKjDcKjciNa4nZ/Ml&#43;GHpEJmAJZ6e5Gdw9maBvmdL5z0SOgj9tKZM6SVsSWdCw406EnfBorrhtvwScVHEZ5L19lgZK9Qxjpjxf&#43;ooxVNTSBwU7CmgUFd0er15CvMpBraTKj2OVapbp3VTlH8IuoF2hEvHdgNOnNPpqtU/JnvjOfWfzEqBqSNv63OHmCLbPr/3qdBYRFVJ&#43;SS&#43;uXpbxifDts/y1VeKnRFGX9PO95Y7ReiwHKWhzWV6tiCSIimbSOZvuiQ/ty&#43;KceiGLvHAD6zbcJxzx9KhGbrUVpEsLlGa1kkiHWIVX4bTJ0CxtKAo3X2Ndh4onpOBscO3nr5k1HukB8d4an4ZWPgbXSRB3349nCgyiM2LNOd7h1hSWAw5qKlNbWcSBshsdCN9kIDbcy18cSkvmmCMo5uxyJAGa3AXGieLrdfAf7iTY/lzHLptqIwaLwEJJOB1/5tEues3Uy4prmlxTLZ&#43;71NGsrNJIwYoheOdF75mIlVaEbB1EBeNadmcjnKggPLjyC8JzsGzXLwb78KOzKAK7A2T1Eq/wAV7VH53nYLeQib2VMnPnLRkq45Bw&#43;Otp&#43;b6X59sBTTejFzk&#43;rAQF69NJKqT8YWhb5GYIaze7zaZNeXpcwTePvt1uYMNcbNm3wkn5hRyBwoLhhs&#43;fciDbUDrS8KzXRJ&#43;2VK86yzsSDI4uWx5xSthgBxqvr73weLweD3ol1/i9E/v6mxYJOeDrVWDdqv36vmuhWIx3EmeCaVaBCeiglpYORBRFM5n9lfpyuXSYzanCb&#43;Er77jVzOuwDIDV/vW3yPuFNI96OaCihhh&#43;J0dPlhK4ZF9K2wgH489n5FUMfwERlewX0iuwTyflUV9xPGtBf7zeME6igoT3Yde3LHD&#43;RPhCXPZlNdu09iTXNE1OKtx63cyAdsUNP0NK5hc3FohXkq5Rb6FNZ3tKGtcGk4TaEOkFd6iC&#43;8T1PP3bhM4Rqq&#43;6TKXTHp&#43;pnwvTdCqChkV6BskAwL1TThV3QabbPiWf/aAsxaiMod1rtikwy6nnYaDnsSj3z3zA7FUJXYL4tP9Xayzu9IjfW7zikVZfPrlXVfTuPo2ly1XSE22k7hMw6u0ZM5QI2pHQtMRpQy7k&#43;SdlG7hZ/z/VWnRu5MUZaYPZhbM0OMQ5/daa7n4qlNh8yWoBcbpMa8CBLU0zPnYEr25tdwPn0go1kcMM1uJpBnI3YahaqHH/3wj&#43;HSdRBshHDCZWWRsMCibRUrs3p0ggG/3NNCAV9YTYcrmBG4N5uP0lGqFkmjiEwDdwV0HogR7shWB&#43;uukTCNgD6jwfLjTHggq0OHYHY33qM6Z5uG0FaINyrahJDCeZzavmPES6lT0HMkLO5nlkRrX&#43;c5MPOdE&#43;EH9mlr12s/t51TyI3u19DQDmeHrYdPhZvJlkMElHfhT/YArcwKw&#43;dlTogzYKaljtQWJtly3Dc1YvD2ParbmFWf65ycIRTK3dzSbfx9P2pU03jSkB4n0YNqsK/g&#43;x1bcVbttPHmhJ2pLMSmN8nCyJm/B1Ek8dWA9zmnF1&#43;PIs7vdhXox6bEDeDVQM3WR8EdlY2vL7nAkN&#43;IBxzPK2lWwoAWp4XSArIIOXNO54Jh4EEuEYUmBMjzS8khLexsi6qCttL84fWoot0EDTHuvf307c6SDlBvZTU9bDgXh1Rlx27aC5Ix4c8bCYuwUxFnsWOnAV4rqXzuSPwlc/mExCVmIQnPjoNXkqMMa9RdFWsXCGLKjBB1HJBp/ikkgVde4&#43;k3ZpCVVrHOCK2L66gDUh5vFDtEs8ClRTC60afN/OWQZgunMMxUqZvuD2zWhjIqoOePQvZOzIVycmLM&#43;Tn45OmarFeZffHAK3s9GEvdNSHP&#43;pB1FFz1uzquiOxYfR7HwLNenhK7yjP16oWO5AJNe9T/iCdwrBaToBHwNEXIHeJroP/bznjcZ9WpJHoLxHI7sX3A1kd57AyuvFMgToQuKZI7szuQ4wveilwLXAuJXpolQPadjaaUEkWOOVFSFF0QgOe03SgWA2BWhwXbfeENY0jNt7Y8LkIukkQUSLI8U5GerD6oONPFjjgkcVfyvgLLYuWT2QndAfQesFcYJYhRyTY/Y8uhCcPgA2Aff8zZgleNQlu1xoQDo/b6P4i4O4DRmxygu&#43;rxhFKmRjZAbsqhs2Laetza/ZbiWzE2i0ZJX/b15o1pu7HUzyAodslfqGbd8I7fhkZ95LkrKLAU3dYoNluqpJnpnczox596mRLOuNzAWruQGFVkInc19/6IViU8BZhTIcQ6LY7rkjxfweFmbtAJiHYCCrQfvjhSAIbqyFUvUmHwi2ChfzgdwU83IZ823ONYNsqUJduxkGZ4&#43;XivgDX8u1Oc2O1hQ3G3vPTwYPH0yaGSwtu1DEQk33rorpsPZ6KwIdoHLVUZe8D6NLYPakcTdzeqxVGOJrVzHC7cLlKJAxI5kPn/dULqNA&#43;2O7oRxXLYWs0hM&#43;x9Nmgj7ixfLJyIUspBThv33OyGalYgzRpTgZMEtsLPX53y8hKEQJeEjUZKkND5K2YOXuH2VVIqGNwTWzuOg4dS5ploQKi9vsgJ65HZHHGeTmdIh5JvJh2H24FC2Nmtc2iThKUf1SSzLHApX8FVw8YdgRU7TN2NEqeEvlROMH3dz6LbrqR&#43;Er/Qhrx0P7P5fPfF8mAAoPHkK6vo594EvRrM5nB6Vkk/1mxLDXEQYoqYuhp30XoMGgLjDkD9qWV6C3HHtWuraKqv7GMq6Rz00b7vLtD2BlhZJeiu8zTr9O3xUazOdCCNo/YyhqcjphxRqqrtNwa9tDVujwXODMsvov9XyZsYHmbjzJWdQFi1ibomrReo3s2E41T5JG9Q0V8atB3xrDCSm8FFf8FGg7YzTC4Thd&#43;Z3nKy0gC&#43;ih0YGq9erDlL4hWd&#43;gwRLKP539FRl&#43;VAckD1SLbDo5/&#43;z3kP6fRWqSLm3agxZ6yogpKwMMsI861DCwkQmTHUqsy2nrkNkiRrlxGxXDYT3Qcykaoe3Ro9&#43;QG21g&#43;moZUbVfqs4LXRZg49FRBYWp9gCDGbL4iwrmVH4/3/47SEhkb76GigcVW49RiPN9sSL1gX0geF29An0gZKbquH8QatGJos27y6gsAVzIcmv7vkS5MELSZ46An/PqwCrojWzPeRy5uwM/paEqMnYF3fppik9Jmm3R09c0ySrLpWk5ZLLa/DMCltTxDfG9Rxq4Nk3t0fgFAmS21HmEr/KkL8UCxZr5luk8ZqbezzRDP&#43;9MWz&#43;QIznNPbAag9fA8l3rGJiXCfdvGv6wQAzOdPt&#43;L/ler6NDPhlEE/3F&#43;/8HeVG&#43;zXT&#43;kJO9EFJOmdyngdd1N1ayFdMPqSmUone5OL52wEDacm1Zo4j7YkilyGijtKHNRUOvH9MbqMHjdQlDV3K8L/sMkHkT0MwCkCOCs7b0FM6Bph8UE2gzYVenMU7Ch1gphX34JM7JmH74kEglD08cqoOzjjA4Z1p4gjanx6BXpogbEUmVHdPODME8Hc&#43;VLHSkZMXcJ7pHPCW0GZaE1x7z99Am4wLGS1cMobMCCHdTDtId1qjxtQgZGSQKSZv8bLbMsIjES5RRBSwZZq8RYk0J2BeNEMiGcLcVnLzBsnoh6Ea1i/YnM4wnfCV/8zaRA203IuV1IGhMVtaBjYKqzTky7VTv9YFIkEBaWfBkUwHwcx2LgHZu77DcK15t7k3tPdn3YnePWhaWOI60w/eq70gH0AlLq4fRVz/esnhYm445x/M1CZrDG2vQ4jMkUiaXgLqrci1f&#43;Gw3i4agyTEUHZ1e/HH45B0xgxUrmgCOqdMnVPuIDJDLfVdxo7BkseYm4jpJz8SEPkCSAuEkFQWjqSIZUpMB/7K3DUzlDu6GrHL2dNd6WCuNDzwyAe49nDUUu555gpFAcG1mcsk5yn6KTZxNPs930xHrCazN3exyZxULDyym86ZtIE0cuxDe6uut4aEdTly6PqI9JE0faBgaYrSwSQvDpHnXs9MGocTnqPcf6T5z7o3/T7N084JcVUaC0tSvAP&#43;xRp7t2DVlVeO6hQcJj02Q5wLEubPf6/gxfFm82JluqCQNanzUuMxaKw332nykMhlYxdcq49hW93Lw5zfpsaF6MVYyUWD8S7M6WEbf23FDkUyKiMHO6zeC3ywAV7blXsK28FDQzD8AAvz0Z3rmmFbWwfUUqE5sYUKtqlq&#43;QZV6ORXczd6OOoTxPIQrAOSZF87rdGlhonP1ucvAHkWXOTdq8rLE7jtNOTXHc0Fs7YPTsqdRiyRqWxPI3fGEWN1s2NfmH1LtLDruteJLbmsy349QINYd74GImDjE1etInJPuuTDEabnvTAKuaVO4Ry3ouyjpqHIFWU43qozbalciWYZznNm9bgiXfQbxIhlpWvK5afaM0O3OV5BqPy4usdH3W&#43;5aIuqgMV/1Kg8&#43;xFuK/o&#43;7dcZSfLLQyuJtV32uFQtAmc/aLb5ddL/Q28mKLu/UiwOolgD3HR6&#43;8J2SALJbCoZm1bYbBN6VbMf5o69q4z2ObYX/nGs24Yc1oCyBE1pIsjYJGa24mX9IdhIXQB5dFwYePPeZ6Rxjie1WeaU7crVUN1ScUl2Kou0mhHKlW1WOqGnr&#43;eKWl&#43;H0oywjA2GiCNByWxtOshS74hxykWB92SUC&#43;FbDIjlZxwN27YXSQkvdNqYsyRehyqOV5X3mLwDC700&#43;3DwXZ2EIPvFPmHHPD5wgLB2YoUmZHRFq4gg7&#43;WUHs4bVtidif2/tpMtYzq8WsOJo/b4VvrMPcIIsFQ80xJIIgK/HPmyrbRMxQ4fuIrETjC&#43;iXBpVrcoGEglC5aIjK//iaOawE2jD6wdU6j842gwGAEY2xNzZKRPjtbZNSOh7200RqSjClZeOLBWjDEKlRsVC6cpr7LkNRE/xcGPVZkF4QXvpqa/YfctSDtirvqfRnEThYUJygr7ZYm0LHXkDZlTe8Iu54MCRVcDWWBoGFvxd8lE/HptSSZ5Mev3p68srTGS&#43;DgL/ugNEItpUSd4&#43;W24SHamnyLjChu5FqtUaFHhFUgeZ4mglJxT4/1wFQEx7pYOf&#43;VdhgIKFWn8PexFUEN1oTdyrDdljA1CoqF1Nz/cTFIYwugCC/jMhNmKKo3cEgcn8/2Djaw3qzxqFF/4q9EvO0YalKH0taLrMUT8Eugs&#43;8GTpyq1iYFnZXfVoZ5LpxHDJ1XmjC&#43;4jljAybq4Lw2eAdjHPB7/7&#43;Vei7hzubPU4ZGyTETtnu1itbipILkfph&#43;ZOQY1WDOyGM&#43;MeUOZ9KgjrnSWvDGRs3MztHMS/FhQoIK53cc8snnsNBXKKnwo8W/Vvd2ZNeadm5HDBzmtu4/cMagoSkfseHgacbVV5v&#43;Ro&#43;Ip/kGJKtCKgNC7ApGpCikEw6DdRDqiG8/fTSTb&#43;R8M0bsROUm4AoXUUiMfNgFfIM2IZnBiT6rN1BtOFeQJBgo1KqFsd0VkeN/tQgIoFNYbUpH5I&#43;nMAHejQvPNOZsn&#43;Fi/iSGbnc8I4UGe&#43;U2nZjxQ7DVoNd2Zxn52rzsz8rK50QOHVt0jKbrB3S2WBP8JrkAOie5uJF1puvjqOXbi9yGYQgjDiMT&#43;4FtLmDE73MJxhBpVHq6Y6l&#43;2fNBTz6B3&#43;Rj8ItFMihT9tj5oXIb&#43;CLxGRlI/JO9sWWb8NJbOnraQZV1I&#43;9lh/roT&#43;8MrCPrMpPEUqZl15/D7fPgQ6hErgbpDVPy8/WHJF1xlT0VWG6TRSy8kX2kNIUYEmRQFstrQy2O&#43;h5w3Cn1qzVY6oOGsTwlJeJsOEIPsTETK8lFDJnStR/IuZV7QtfyQLKlouWpP9Fk3zerqoBtcw1F2CCeO9Nola3mYrHG4mXRsw0yT4vJ9DifvextNDin/mPiUikITsbeP/ESTCtO7LJG2/L/uM5sNrIyV6wVyC0ZBjvcBijCgqcHgIZW0B6rgp2q3IHVzKqpKNrRH6pDxPqF5y72XPjRbzYIsArA5Q9qSmPnVvTZ2TqMSxNpLV1CBwwIxoUGvV2ywz65lsQeLxwPqx1diA8MYV6ilUkFLlOk8g2Ok2mJsQHAwLug7s0iCY5ygMorg8uMT&#43;Si4Xr6ozEJvXASEMSUzoTbbosNJ8iBGob7GFf/MFYj6livWTHaOO6u0pxzKiYbXYS/LqZeBK4xiiA4VngIcZed08tpEbbND5uVQb6SbfpjbYv872jdefcgDl&#43;F261UeiIOlvik6G881ExJ0IHjWvqKOZy&#43;06DP57xeXc/ysXc/g4wX&#43;7lk1LsT6ju&#43;zlhbKi&#43;C/DPD4dvery3MqH&#43;FxdtXB0PXr&#43;w8Ey2/h/HmOiHJIAld8KuLXeTGp&#43;odtJEl11fL9mAWapZYbJneK4xWVwpvnNU7KwBBqPu1EADYomv0c&#43;QFqWXxB1W5thnUHD4MpLzv24ybItbGtHTPMRZOKJtU6qyPrLBx9pruNm5eBdQ0qjZmVPM24sIs&#43;QXdBBFY5sVnhh2Igk7Sjarvw1vyanoX2XHrjfWysngjMwIE5UnthVUkjGJAaSs6f9SSG3ZftNMEa/Jnhi34Yd5aSE3CGdQB&#43;NM5dP0N9dsCmZlYoA&#43;91Hdc7HWKCG1buGCzKAHHDFMxzRfm3sedum/tY/aoNcSrYGjrExof8pnZvXPAze6aw6F9DM5x&#43;AFZeQwXhU1nR1jCiEiXqStkrz6VA0SFIiwpfP1mEr3Yngmtonyy1p&#43;3O&#43;YBHmJwlG0iTY8/iFmXpGjoUzdbFFTO/a3Xass7gBj7XRvbIS95qhNBjFmHEDka4CmqjLdjVAuztUKJ1U2HIaQ78wWqBHVTERVg5NbCgiyGUHfdfe&#43;mWohZ&#43;T5orsOWD8JQzqS2ERV7L0W5TMLeA7gOdWddtaANvfllv7VxcCMk3wIujv1X/rp48HM&#43;Fqu1dzXf5S1P5SZjFBkOOn&#43;7xDlWEiR0fxXSLejgKgSDH0soZ8DLCjRczdBhfIc13je7/xXl4tFaB/FBujyM3x3Xxi9b9UBrRm0gCNU7V6sC24B/so5SYdL7n2NQTgXHyhcqeF/4q6&#43;Di4UUbpggXHtPAFcmEAo4Ef9syP1ZAGfAoDjbZD/ZRikgFuGJG55ftHytq5EhK0GtHGKYcqOKFCPHREnxwZFHhefLhnwsgKSYhgVopWZKZhc24NZSC/TbjZyG8EGudDgHTC5RVOehSQ5w96Jab/As&#43;kZxo87NuIWhwnJzOQ3UXOhW3T2jd6dgXIV6u4EkWGIDCV8sfoVVxhuwZWd97v5UukZlkOJnDLlJuVhJrnVoZiZml36of//r/2NG07VYQefBwQlBg9Afd5R36Ld&#43;hjV71C&#43;Ky3TNhtfTV6x&#43;8aDn4KwY96JoN&#43;/lLooka6oIdF/e4McQgYTS48MER&#43;kTUGFJkAGVegPSNTJM0gWN5Hs1F80N7sQGPlDuMp8HctGQao8R3BNbV3pqgBMi28f4H4ovVIYOZekcMKhouWn1NQ0KkVMGPJpUBqronHMdOCWMKBycF4Ar60Y5UgKlQ&#43;GX7bGz7kG/SWWlrt2QmOe9Xo1QGCoyjQaYUq154mYMAmIsFpjeBTRmjP1z84V87R42uDP46tHQqX9u5NYZLVBMpMKXZCLgHZ628JQZXAwGygekuqVouAqDLWDHBgqsL/lY3efDWtXSsCO&#43;BWtYt1xy3pKn7Bs38GU4PJYZkmHrflPM6C50S/nQEZqYeRZOuQ1PgQ46IbaTfENOD1OkzRLoz6pEPX873mJgp2Bwa&#43;5GDd6OniwLua23&#43;gvuZ8bjJlthhST9&#43;xWMgBEp734NdW9IWcgClzujLRuPXl1/Gyp4VMi483rNI/reKnpf/2YJccftMI9vGT6RLDQwPS9e4vj39oAWXenQYm4izPlrsPtr35PxG3E2hxBMassJR02a6cCJxFSLDDh3HNxDBH29KqkRH9lj2Tp/zYmIXKWb2EfUZrTeS4DuOiLm8BIY9bCIqtUzzY9lcrCsN&#43;yCfgBvyzxZGGVuonTxb3qe3AXqUoZcNvuSOjkkjBzSnSTRuUvNeQbdmMnE3SKw/&#43;1p2VweO5liZ&#43;pLTSsEyO2m6NL&#43;ecq22TfsgsZP&#43;VUx&#43;YVb0KU2n0xQ91yCHY&#43;kxgyK4ZmzNyIdFI0mHzLzsApyF&#43;yABwxoECRl2rWwKiQ/Hb8&#43;u6RQJKcvm868hxeLbTbrPmVpTe57PmUDmXgI7QUTyfbhSnu2pCdoxqfMt74spuQOEyALzQlEr28w9NP91ZPOaTKb6Mdqd9BjGt4E0PKKXhvw5kiGi0iRFZTG6CI/EEbPdWqj7d7aC/4UZTlCbIdFHLl0nApy1V/TgA2S96URCRLZeCUwHmEy/68Wt8vh&#43;s9bng3m1fIIGD4jYXVk2j&#43;gkv4SZgxjwkExzaWSjDvH0CYdS7CnJC3hWieuSINRon0p2c/0kfPEc7HNfnTky4UKah5wiuNUt4wQAP7IM&#43;p1uauXX/XhVHpRQH3xQxbwFfVXxcwUsr21NXjXstr3JYsWs7r3tpYHiSToTl5iGgVomFVYJDItMCdT4rs2MxWfyqlcz0Oap5VWosS4YDq0uho8uHHePA6mzRWVHHc33GaYJCHgeBn5dksig75X8LWWbgG6OFE5108yi&#43;hu0NFgi6s/JuJoqbzeLzJGCBbcZlEES6G1iHX1RQal4PsLKc4BZ21Cfpk46V8KRLQm2&#43;gfkjIQX1JqTLVkdGzJr7Uu/smhwgfLRgowySOBT6ovA/ee2JUWDN5uQoypsw68beAgcL55gJmSNtbq2O1AMeX4dWGOXqXEgKUX3MWlDzEO7/777GlnaoWMZRwX7YGK7M6LHEVGvHX7kiMk7UmVra5J/XFVX8BsgMbWu7DfysMoLTg5TkQpy202c2wPj6SHU72kTxR94oWFHZ/HtB9/935FNEq7VkOYzdgRyv/gfhm0WdmyEJgMhSGyvfPjuPCYyTk8Pk1YhzTNLiSUoSIULZIQj5I7RjhQai8QDu07fT7m80eTqwsesLZIr8FV1RgOzxBMpzopi1WnxlUXYYEjMuh5w9Z84lblsM/fjPAagcDEIB355Hsa7MBWzRv9A4h4iQcnaUhQd8k7ShBAoLaWVPXQ6CkiZS1M0dix5rui9cH/IQ5lMKysoHCB&#43;4XRTcJxSkni&#43;7XSiR1wzYXrdy6VdvOZCNUWh3r9Jiryw/I8s&#43;IaI9hOW6gWl0s80U0K0VP1bTyrxhoHwlWgpg5IS5EVxZe4VhMYzUXqLRny&#43;fEgPvCb0soi1Qgo/Ei85Cnn64Mq5eOkdMhlCxKqfqfaGC1vKqEWdbWt7jyZ7AF2fijTJo00ROZincNZ30XF0pL1pN1J3JNPMnkFH3DnU9F7ZaR6lZD62i5IXeb6N6TDhPV5/4pGkOJqCA8/6OzaUhwGWN68EuETW0x5JRhbrfwzFQbMSIvbtmUwOhyWzcvMthH0xHAV4CCm06pRNaLbnU6X74pqvpJaGpiDpDucwTuYPE5HH&#43;iPE5ds10n0qfY&#43;P5Uj6BqxeUxZL6kpecFBZ&#43;SICgB2ouabIAn5CyCx6jwwKNLR2ULsl1OkJ9QO9AiWjLW/VEGmCq9lNpSa3Ol4shHb1RBGgIrhtAUZn77OTdoSoKZb8cac8OJrm2lpRwRbOSQVhwfjYHiMGmmYDwDndEay6I/zY/jUUEIIl7qo2yo8jD1li1o6cF4NS9YxKiELH/YgOpqvT26hQ4zq5ApcBPR9Kpnx2onURsPOMtpvdvdAE378ueCOV6vQFVHhHAHnbN9InTg51l52q8&#43;ALNa5jyQyvB5QOoG9aILFOyLJwSZe&#43;kBzzwGMYRWULudmIxRnjP83ly42OAi5Pkmot2AuwohWRk0z931UHuJ8O/A6TyllUcZL0VF&#43;6NzyJfN9D7OA/zN8C1tPjfxm3WYrJNa7k4JySxK2zu9yrWclm8HcpQVPG/6U3kHghTGG7ozsJ16&#43;44Bb3w4YYn5nkhcjCL8Rec7DBOohxUOqDWRCQ4BP1mKzr3e1bNqSMNpHfPXhYqImZNTzjdiNIXvzx1LzZTiw9&#43;zmqx0Vb5pHovGh1j67cDS69DMF3P5UdrQ8y70a&#43;7e99Y7h3YiQF7oU8ftZroC4&#43;GPPLsI43Ng/t4YPzTRxHWOIocat8t1OCubXva7amNJj5G/4UIB&#43;aVkJGhcm0bkeJBEYThZsQ06MN4MgjqY93T3oHitQuwOsDNVRL1dbUdeXej2eNSw84HWnq3w914pAEqQGR8GQAq4flfL&#43;meww4JWvAXOgS2&#43;9YCeBRaGJL1YqR24yLQTBQAjmZXYrgQcGKCSeR9qbwm9kpVVz68oKDq8oDEqWpptTQkcHzMKNcq2g7G0Wted2JzXzckzxwq2QDSiURrwD9oOp9LolalOgCf354veTJrCRCi25u2lLy&#43;b1TLa1EEKXB2/f3cxVPyo83DviU9kgBlM&#43;jfwYh5xGDvautNT/BQD8MNqnWBx6N6fsiycUpgkp9hslsxDHnXQB3H15NA&#43;p&#43;X23Rg&#43;GN/okQ52ZYKPCqmB7MZtqDXNxYno8Z9UYrSoOUEgabnLjJhY74vbA7jfY/R48io7B7Lxf04dM&#43;ZVZVOSG3rTA0weAzYx8k&#43;nn6S&#43;GUYYR5rELjnR/I9rveCHBgRth2oO/rDBSR/JXnEOarYP5QwgImDlpOgSLMvBCFJJKKO6fII15KymCA1dh8kUh8ZSpfRHHZt&#43;HH9n/q2J31533KCGVRCfHMJ0G0o/ZwTwXcZUX&#43;ahcg0i2TFICodRBKy30hNDZ5S/aFKg3O8rDnjIra/Ut6nKCydSAFlyTeKdbZKM7oY6OYJTgmRWcHaBjgMdp6iYosbKl2zCVDCI&#43;6JBz1UAN4EwgGXsJ0KjSWldJeilBo6QBSXXJfOoC5m/e&#43;2&#43;at9lKRYMJ3bqo6mztNX2lt18xL3rNd9zRpGaSOlT9q&#43;IUVjtJsZd7CxmEo27928YPzxwRDPvdTwe2YficWVCnNGxRV2LmS1rQeuBmUWHcbYImMdjTTuGBh9LlvRNXU&#43;SoOeObltsYlHJVE9f7Y0LnOT2YKoVJ4AGDOtuCIApQrk0pMphFEa8QM/itFfpTwcGxWpTKPIgmUvGiQv4eF3Yt6AwnjLm8lj2ihvFo2NKxvSYw&#43;kDUMWGBFR9BfBKRq9xerni8QKk135C0dg2aEnz&#43;6&#43;jpRC&#43;wgXkOe6aRIL18EO/g6G95V&#43;FmlvJ1CVhrbUvejtGUY3yyaWSSvYw0202e/g5NTRhrU9A9ownmHWr3AcdSozbsf3M6m/qvQXFDIsjmbQqutVaiFU6JEkufBYuDJcMC97gYOT65FxfvXhTSlDjSZpoLcbWbpPvgKvmPLmNLIgPhOtNG&#43;l21GumKP20FYkBxND5qJPs&#43;s3UehkryfFjBfUUzcN&#43;etDB92yvxNPAiucvO3DnlgqyyekxUozOAOxwMpR7KCJYLE1bPUV/EM4pDmG6zSJpPVlFOtDkWHfeLErW/b4WdQ7sromrfjq6eX8ymz9VZtUw2EI8VjZNWpcNLSkc&#43;/pRfxrV8hfRPJJGRH1qy&#43;TtrJfJJ6w5NM/x5i7mEKZIwYehhryXSU2ZY7ehhfNbw1gbO0huWpXH8Ug2&#43;j&#43;2dJTeTwx3EYzxkOMi7EKVFCu/FX27REDkyNsMSpT8aC0P4/iEck090MTJgpY5J24lirxRLMEEBTZ9bDBpZAjl1lFKxKrb5ey8TtiLNSp1Wu7BUtwBGfiF06Ekv2dUNf&#43;sv8DsS0qSmgfCauzV0UBhKJRa4sjrX5QKG2JCVuiKJsU0bJTKv47JLAsaOeKma&#43;ynAi8&#43;MygBSom5nLVV3TExToo4cYipOb/hy7eqlunYBSjajvUU9VHFf44dww1tUgDZwC65/E5ow4MPw6hOglwEKGyKfgRrsITpxhQMiZaukl4rlQhsNWWt6vRSDY4YE4gbEpm0dTzjwWkUMGRrigHxL6SkItiUD/zQzyfm93j2xSw//lXPZiUyXd5XFMnqswkGmt3xXD4SuK6Vk8F2gQ3V&#43;TGDLRikuN5DEg7V28A7GUFj0DK9Jxr&#43;owrQF5JtSKWo7IY/oGpTlJdpWpOizEdhdN6e3p3mD/H0hHHH1zXaDE4CNyLnzXQPvVKtA9rnUsYAgk95NZ9uuRyUHJdbEErW29s/EsfoKUcxGAfFVKXU3bxhBTkkq0dUkpm25XOR2vJvLgXo&#43;B7tL5TrHYr5jo&#43;tZVwiilxqzT0Tky&#43;kW12lai5ejc9KcHzBaKFBE45LkbnNYzrbTsk45WGazezFHfqgd0LH2eb7TYN2LU7uL0xo8eWb1uN5Hib13lhDLOhI3NVS0craCGY5kxlssfS&#43;txY6lETy10WsYTMvIg9TqT/oFFthdjzbCcrka/rgsL&#43;AK6Ch4WvyrkhcvL6EEGRClPgnsyQ5Z&#43;ks7rhAuU61rvMJBcK9&#43;YTLA2zgVupn1yTCiNMUTWJqic4BPNfeSDk6S5ZSCZT8dgsSqJhm7SgJFPE1rTBrXyHtUa7FgcD7XpmYeMrK2cyUThbKnz1zbFOtcKQxuKyIUym93qe&#43;lnQwKGiwhxOg2BudCH2b4D154GK3ObyvYBoLxWTrfDra91kbN9OK&#43;8tK5RgXQftqmGDR1KJCzfI2UDxyC33nDiM4vL&#43;4Xxv/P54pqKwLtIJUJq7Sq/ckCMnlm13HdoMXUQNGQhuEXWTUAPfItjdwzG9Q3u8vxw3bb9a45Ebi&#43;dlr1CFGqQBVKBknF5&#43;i1TJRJs2J5tex3lWeKshhV/uI/voyePQvI2RwdZ4cSGwqZhN17bectGA1SXd5vWHX9p2RfeRG1V76CW1l6L7iS5foO1OGxfjm845s3HusOav1PA="></div>
+<div class="note-container">
+
+    <div class="note">
+        
+        <h1>服装纺织企业数据中台建设需求与挑战讨论</h1>
+        
+        <p>创建于：2025-12-11 14:01:02</p>
+        <p>标签：
+            
+            
+            <span class="tag">录音笔记</span>
+            
+            
+            
+            <span class="tag">数据中台</span>
+            
+            
+            
+            <span class="tag">数据治理</span>
+            
+            
+            
+            <span class="tag">数据孤岛</span>
+            
+            
+        </p>
+        <hr>
+        
+        <div>
+            
+            
+            <div class="attachment">
+                <audio controls>
+                    <source src="files/notesaudio_1a4e993380323278LBYkhpzg.mp3" type="audio/mpeg">
+                    您的浏览器不支持 audio 元素。
+                </audio>
+            </div>
+            
+            
+        </div>
+        
+        <p><h3>📑 智能总结</h3>
+
+<h4>录音信息</h4>
+
+<ul>
+<li><strong>录音时间</strong>：2025-12-11 14:01:02 ~ 2025-12-11 14:29:29</li>
+<li><strong>时长</strong>：约 0小时28分钟</li>
+<li><strong>参与人数</strong>：约 4人</li>
+<li><strong>内容类型</strong>：客户沟通</li>
+</ul>
+
+<h4>录音总结</h4>
+
+<p><strong>企业数据现状与痛点</strong>
+* <strong>企业概况与数据应用场景</strong>：企业总部位于香港，在杭州、东莞南区等地设有工厂，主要从事服装纺织一体化业务。目前需为管理层提供经营分析报表、财务整理管理汇报等数据支持，但数据分散、人工操作多，存在数据孤岛问题。
+* <strong>数据管理核心痛点</strong>：数据分散在不同地区和工厂的系统中，形成数据孤岛；部分系统老旧且缺乏负责人，数据对接技术能力不足，难以统筹数据整合工作；现有系统数据杂乱无章，未形成企业知识库，无法作为知识有效利用。</p>
+
+<p><strong>数据整合目标与初步探索</strong>
+* <strong>数据整合方向</strong>：企业计划构建数据中台（或数据仓库、数据湖），实现数据集中管理，统一数据出口和标准，支撑Power BI报表及后续主数据管理、指标体系建设等需求。
+* <strong>初步实践与挑战</strong>：数据经理入职4个月，已使用Power BI手动整合财务AR账期账龄报表和2026年销售预算报表作为MVP，向管理层展示工具价值及现有系统数据缺陷，但CRM系统无法对接且无数据。</p>
+
+<p><strong>数据合规与跨境管理</strong>
+* <strong>跨境数据涉及范围</strong>：企业业务涉及美国、欧洲、柬埔寨等国家和地区，明年计划开展B2C业务，存在数据出境需求，主要将数据出境至香港总部进行分析，美国办公室无分析同事。
+* <strong>合规风险与应对思路</strong>：不同国家数据出境规则不同，客户数据最为敏感，生产数据相对级别较低。初步考虑在当地保留数据源，进行加工处理后统一存放于合规要求较低的国家，同时希望提前做好合规报备，但对具体报备内容和流程不明确。</p>
+
+<p><strong>数据治理与标准化</strong>
+* <strong>数据治理现状</strong>：企业目前系统数据杂乱，未形成数据标准，如毛利等指标存在多种计算逻辑，不同工厂因生产内容不同（如南区做外销成衣、杭州做布料配件），成本计算方式也存在差异。
+* <strong>标准化推进计划</strong>：数据经理正推动制定数据标准，计划在明年1月份与CO及管理层对齐核心管理指标，希望从集团层面统一标准，为数据整合奠定基础。</p>
+
+<p><strong>项目实施与方法论探讨</strong>
+* <strong>项目目标与范围</strong>：企业希望构建统一数据平台，实现数据集中、标准统一和质量规范，全体以该平台数据为准。关于项目实施，考虑过一次性清洗所有数据或分阶段按数据类别推进。
+* <strong>实施路径建议</strong>：顾问建议先以一个国家（如中国大陆）为标杆进行试点，做出明显案例后再推广，避免全面铺开难度过大；强调先制定数据标准，否则各工厂标准不一将导致项目难以推进。</p>
+
+<p><strong>技术平台选择与能力评估</strong>
+* <strong>平台调研与需求</strong>：数据经理正在调研微软FA、阿里等分析平台，关注系统能否适配企业需求、技术门槛及与IT部门的配合可能性。企业对数据实时性要求不高，目前隔天更新即可，但未来B2C业务可能需要实时数据。
+* <strong>技术实施建议</strong>：顾问认为云平台或自建数据中心均可，云平台成熟度高，运维成本可能更低；自建前期成本可能较低，但需考虑运维和维护成本。同时提到IBM有相关数据分析平台，可后续展示。</p>
+
+<p><strong>合作意向与后续计划</strong>
+* <strong>合作需求</strong>：企业希望借助外部经验进行信息化评估，明确数据整合路径，同时希望技术方提供平台展示和客户案例分享，评估技术合作可能性。
+* <strong>后续沟通安排</strong>：双方计划约下一次会议具体探讨方案，企业方下礼拜时间可灵活安排，将在群内协商确定具体时间。</p>
+
+<h3>📅 章节概要</h3>
+
+<p><a href="https://getnotes.seek:0">00:00:00</a> <strong>企业概况与业务系统背景</strong></p>
+
+<p>企业总部位于香港，杭州、东莞南区等地有工厂，各工厂（除香港外）有1-2个工厂，系统围绕工厂运转。总部需为管理层提供经营分析报表、财务整理管理汇报等数据支持。</p>
+
+<p><a href="https://getnotes.seek:40">00:00:40</a> <strong>数据管理痛点：数据孤岛与人工操作</strong></p>
+
+<p>数据分散形成数据孤岛，人工操作多。企业计划构建数据中台（或数据仓库、数据服务）集中数据，但面临各地区/工厂系统整合困难，包括使用顺序、系统无负责人、系统老旧、技术对接能力不足等问题，难以统筹。</p>
+
+<p><a href="https://getnotes.seek:77">00:01:17</a> <strong>寻求外部信息化评估支持</strong></p>
+
+<p>因数据对接技术非强项，希望借助外部经验进行信息化评估，明确数据整合实施路径。</p>
+
+<p><a href="https://getnotes.seek:117">00:01:57</a> <strong>对话承接与信息补充询问</strong></p>
+
+<p>顾问方询问是否还有其他信息，企业方表示数据情况大致如此，邀请顾问方提问。</p>
+
+<p><a href="https://getnotes.seek:132">00:02:12</a> <strong>跨方沟通协调</strong></p>
+
+<p>顾问方内部协调，询问是否有其他需要了解的情况。</p>
+
+<p><a href="https://getnotes.seek:139">00:02:19</a> <strong>沟通设备问题影响信息获取</strong></p>
+
+<p>因一方说话声音小，沟通出现听不清的情况，影响信息获取。</p>
+
+<p><a href="https://getnotes.seek:196">00:03:16</a> <strong>企业内部数据管理初步实践</strong></p>
+
+<p>企业数据经理入职4个月，在CMO团队下，已完成财务AR账期账龄报表和2026年销售预算报表的Power BI手动整合，作为MVP向管理层展示工具价值及系统数据缺陷，CRM系统无法对接且无数据。</p>
+
+<p><a href="https://getnotes.seek:281">00:04:41</a> <strong>以Power BI为数据指引工具</strong></p>
+
+<p>Power BI现阶段作为公司数据看板指引工具，希望借此推动销售数据分析及系统完善。</p>
+
+<p><a href="https://getnotes.seek:331">00:05:31</a> <strong>数据类型与跨境数据情况询问</strong></p>
+
+<p>顾问询问企业数据类型（结构化与非结构化）及涉及的国家/地区。</p>
+
+<p><a href="https://getnotes.seek:349">00:05:49</a> <strong>跨境业务与数据出境背景</strong></p>
+
+<p>企业业务涉及美国、欧洲、柬埔寨等国家和地区，明年计划开展B2C业务，存在数据出境需求，主要出境至香港总部分析，美国办公室无分析同事。</p>
+
+<p><a href="https://getnotes.seek:402">00:06:42</a> <strong>跨境数据合规风险提示</strong></p>
+
+<p>顾问指出不同国家数据出境规则不同，打通数据孤岛需考虑合规问题，客户数据最为敏感。</p>
+
+<p><a href="https://getnotes.seek:436">00:07:16</a> <strong>数据双向传输合规疑问</strong></p>
+
+<p>企业方询问国内数据传至香港/美国及美国/欧洲数据传回内地是否均需遵守当地合规要求。</p>
+
+<p><a href="https://getnotes.seek:461">00:07:41</a> <strong>合规解决方案案例分享</strong></p>
+
+<p>顾问分享跨境金融机构案例，通过选择中立地区（如东南亚）建立数据中心，原数据留存当地，加工后数据统一处理，结合脱敏操作解决合规问题。</p>
+
+<p><a href="https://getnotes.seek:590">00:09:50</a> <strong>数据类型敏感性差异</strong></p>
+
+<p>生产数据相对客户数据敏感级别低，当地保留数据源并加工后存放于合规要求低的国家可解决部分问题，企业方希望做好合规报备但对流程不明确。</p>
+
+<p><a href="https://getnotes.seek:692">00:11:32</a> <strong>企业数据现状认知</strong></p>
+
+<p>企业方坦言目前系统数据杂乱，不能称之为数据，未形成企业知识库，未有效利用。</p>
+
+<p><a href="https://getnotes.seek:714">00:11:54</a> <strong>现有数据应用基础询问</strong></p>
+
+<p>顾问询问企业是否有基于数据的报表等基础应用。</p>
+
+<p><a href="https://getnotes.seek:723">00:12:03</a> <strong>现有业务系统情况</strong></p>
+
+<p>总部使用SAP，各地工厂/分公司使用金蝶、用友、天汇等不同系统，数据混乱，部分发票等数据存储在个人电脑，管理层无法查看。</p>
+
+<p><a href="https://getnotes.seek:780">00:13:00</a> <strong>数据统一化案例询问</strong></p>
+
+<p>顾问询问企业是否有数据统一化的MVP案例或相关尝试。</p>
+
+<p><a href="https://getnotes.seek:792">00:13:12</a> <strong>非结构化数据管理问题</strong></p>
+
+<p>企业存在大量存储于个人电脑的Excel表、图片、视频及邮件中的非结构化数据，管理困难。</p>
+
+<p><a href="https://getnotes.seek:865">00:14:25</a> <strong>数据治理项目目标询问</strong></p>
+
+<p>顾问从项目角度询问数据治理目标，是一次性清洗所有数据还是分阶段按类别推进。</p>
+
+<p><a href="https://getnotes.seek:907">00:15:07</a> <strong>企业数据战略方向</strong></p>
+
+<p>企业希望构建数据中台（或数据仓/湖），实现数据集中管理，统一出口和标准，支撑Power BI及后续主数据管理、指标体系建设。</p>
+
+<p><a href="https://getnotes.seek:1037">00:17:17</a> <strong>外部经验与案例需求</strong></p>
+
+<p>企业方希望了解顾问方经验、方案及其他行业案例，解决数据孤岛和合并问题。</p>
+
+<p><a href="https://getnotes.seek:1090">00:18:10</a> <strong>分阶段实施路径建议</strong></p>
+
+<p>顾问建议先以一个国家（如中国大陆）为标杆试点，做出案例后再推广，避免全面铺开难度过大，同时需统一指标含义。</p>
+
+<p><a href="https://getnotes.seek:1160">00:19:20</a> <strong>国内试点与推广计划</strong></p>
+
+<p>企业方同意先以南区东莞工厂为demo落地MVP，再考虑推广至杭州等地，但不同工厂指标计算规则适用性存在问题。</p>
+
+<p><a href="https://getnotes.seek:1235">00:20:35</a> <strong>工厂间指标差异案例</strong></p>
+
+<p>南区工厂主要做外销成衣，杭州工厂做布料配件，成本计算方式不同，导致指标体系统一存在困难。</p>
+
+<p><a href="https://getnotes.seek:1280">00:21:20</a> <strong>数据标准制定重要性</strong></p>
+
+<p>顾问强调需从集团层面统一数据标准，否则各工厂标准不一将导致项目无法推进。</p>
+
+<p><a href="https://getnotes.seek:1312">00:21:52</a> <strong>技术平台选择咨询</strong></p>
+
+<p>企业方询问数据平台选择建议，目前调研了微软FA、阿里等平台，关注适用性和技术门槛。</p>
+
+<p><a href="https://getnotes.seek:1342">00:22:22</a> <strong>平台选择与预算考量</strong></p>
+
+<p>顾问指出平台选择需考虑预算，开源架构相对便宜，收费产品如IBM也有相关方案，云平台成熟度高，运维可能更简单。</p>
+
+<p><a href="https://getnotes.seek:1380">00:23:00</a> <strong>预算与系统适配关注点</strong></p>
+
+<p>企业方表示预算充足，更关注系统能否适配并发挥价值，对实时性要求目前为隔天更新，未来B2C业务可能需要实时。</p>
+
+<p><a href="https://getnotes.seek:1431">00:23:51</a> <strong>云与自建方案对比</strong></p>
+
+<p>顾问认为云平台在运维和维护成本上可能更具优势，自建需考虑长期成本。</p>
+
+<p><a href="https://getnotes.seek:1499">00:24:59</a> <strong>IBM平台展示需求</strong></p>
+
+<p>企业方希望下次沟通时能展示IBM数据分析平台，了解其数据整合工作方式及客户应用案例，同时考虑与自身IT部门的技术配合。</p>
+
+<p><a href="https://getnotes.seek:1583">00:26:23</a> <strong>数据平台建设难度评估</strong></p>
+
+<p>顾问认为数据平台建设比业务平台相对容易，数据整合对各部门有益，阻力较小，但企业目前处于从0到1建设阶段，标准体系缺失是重点。</p>
+
+<p><a href="https://getnotes.seek:1629">00:27:09</a> <strong>技术选型阶段判断</strong></p>
+
+<p>顾问认为当前企业尚未到具体选型阶段，重点应先放在标准和体系建设。</p>
+
+<p><a href="https://getnotes.seek:1665">00:27:45</a> <strong>后续方案探讨安排</strong></p>
+
+<p>双方约定下次会议具体探讨方案，企业方下礼拜时间灵活，将在群内协商确定时间。</p>
+
+<h3>✨ 金句精选</h3>
+
+<ul>
+<li>“数据中台也好，数据仓库、数据服务也好，我们希望能够把数据都集中摆在一个地方，全体上下都是以这个地方的数据来做规范的一个标准，这是一个质量的一个规范。” (战略洞见)</li>
+<li>“如果从0~1去建的话，首先我觉得应该是以先以一个国家就是为这个准度，先做出一个比较明显的一个案例来，让老板看到了我把数据拾起来的价值，这样推起来会更容易一点。” (执行策略)</li>
+<li>“你如果没有标准的话，你这个工厂说我这么算就有道理，那个工厂说那么算有道理，那这样你这件事儿就推不下去了。这个得从整个集团层面去统一一些，先推一个标准出来。” (执行策略)</li>
+<li>“建这种数据平台比那种业务平台可能会容易一点。因为数据的这件事儿，大家贡献出来，合在一起去使，对大家都没什么坏处，反而会有更大的一个好处在里边。” (思考启发)</li>
+<li>“我们现在的系统都不能称之为数据，因为它都是一些信息的，都是杂乱无章的一些东西放在一起，甚至都没有说作为我们企业的一个知识来去用，没有属于自己的一个知识库。” (思考启发)</li>
+</ul>
+
+<h3>📋 待办事项</h3>
+
+<ul>
+<li>顾问方：准备IBM数据分析平台展示材料，包括平台功能、数据整合工作方式及客户应用案例。</li>
+<li>双方：在群内协商确定下次会议时间，探讨具体方案。</li>
+<li>企业数据经理：推动在明年1月份与CO及管理层对齐核心管理指标，完成数据标准制定。</li>
+</ul>
+</p>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', initDetailPage);
+</script>
+</body>
+</html>
